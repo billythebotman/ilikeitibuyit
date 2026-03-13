@@ -3,250 +3,689 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Products - ILikeItIBuyIt</title>
+    <title>ILikeItIBuyIt - Curated Product Recommendations</title>
+    <meta name="description" content="Honest product recommendations for home, kitchen, fitness and more.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        @keyframes scroll {0% {transform: translateX(0)} 100% {transform: translateX(-50%)}}
+        .scroll {animation: scroll 30s linear infinite}
+        .scroll:hover {animation-play-state: paused}
+    </style>
 </head>
 <body class="bg-gray-50">
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-pink-500">ILikeItIBuyIt</a>
-            <a href="index.html" class="text-gray-600 hover:text-pink-500">← Back to Home</a>
-        </div>
-    </nav>
-    
-    <div class="max-w-6xl mx-auto px-4 py-12">
-        <h1 class="text-3xl font-bold text-center mb-8">All Products</h1>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <a href="products/mdesign-small-apothecary-organ.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B01KP12IO4._AC_US200_.jpg" alt="These Apothecary Jar" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These Apothecary Jars Transformed My Bat</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/vtopmart-10-pcs-flour-and-suga.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0C4PRH1NT._AC_US200_.jpg" alt="POV: My Pantry Final" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">POV: My Pantry Finally Looks Like a Maga</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/housolution-3-tier-water-jug-h.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0CQQ97WB8._AC_US200_.jpg" alt="This Water Jug Holde" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Water Jug Holder Changed My Kitchen</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/tp-link-tapo-matter-smart-plug.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BXMNJDW3._AC_US200_.jpg" alt="These Smart Plugs Ma" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These Smart Plugs Made My Life SO Much E</h3>
-                <span class="text-xs text-pink-500">Tech & Smart Home</span>
-            </a>
-            <a href="products/kasa-smart-plug-ultra-mini-15a.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B091FXQQMQ._AC_US200_.jpg" alt="The Kasa Plugs Every" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Kasa Plugs Every Lazy Girl Needs! 🛋️</h3>
-                <span class="text-xs text-pink-500">Tech & Smart Home</span>
-            </a>
-            <a href="products/govee-smart-plug-with-energy-m.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0CKM8CF7N._AC_US200_.jpg" alt="Finally a Smart Plug" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Finally a Smart Plug That Actually Saves</h3>
-                <span class="text-xs text-pink-500">Tech & Smart Home</span>
-            </a>
-            <a href="products/waterstoragecube-premium-colla.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B07M84GZC5._AC_US200_.jpg" alt="This Collapsible Bot" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Collapsible Bottle is My New Advent</h3>
-                <span class="text-xs text-pink-500">Health & Fitness</span>
-            </a>
-            <a href="products/digjuper-stainless-steel-water.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0B8Y3RB3P._AC_US200_.jpg" alt="The Water Bottle Tha" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Water Bottle That Keeps Drinks Cold </h3>
-                <span class="text-xs text-pink-500">Health & Fitness</span>
-            </a>
-            <a href="products/taketoday-collapsible-water-bo.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0C4XZD5PQ._AC_US200_.jpg" alt="Travel Hack: This Co" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Travel Hack: This Collapsible Bottle is </h3>
-                <span class="text-xs text-pink-500">Health & Fitness</span>
-            </a>
-            <a href="products/ecohub-water-bottle-holder-wit.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0DMST2FHK._AC_US200_.jpg" alt="My Stanley Cup Final" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">My Stanley Cup Finally Has the Accessory</h3>
-                <span class="text-xs text-pink-500">Fashion & Accessories</span>
-            </a>
-            <a href="products/linkind-smart-plug-with-led-ni.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0DT182V7V._AC_US200_.jpg" alt="These Smart Plugs Gi" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These Smart Plugs Give the Coziest Night</h3>
-                <span class="text-xs text-pink-500">Fashion & Accessories</span>
-            </a>
-            <a href="products/aisiprin-glass-spice-jars-with.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B09Z7TVWN1._AC_US200_.jpg" alt="These Spice Jars Mad" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These Spice Jars Made My Kitchen Look Pi</h3>
-                <span class="text-xs text-pink-500">Kitchen & Cooking</span>
-            </a>
-            <a href="products/netany-overnight-oats-containe.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0CMQC79L4._AC_US200_.jpg" alt="Meal Prep Game Chang" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Meal Prep Game Changed Forever! 🥗💖</h3>
-                <span class="text-xs text-pink-500">Kitchen & Cooking</span>
-            </a>
-            <a href="products/comsaf-airtight-glass-jars-wit.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B07QXC72NK._AC_US200_.jpg" alt="The Glass Jars That " class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Glass Jars That Organizes Everything</h3>
-                <span class="text-xs text-pink-500">Kitchen & Cooking</span>
-            </a>
-            <a href="products/dog-water-bottle-portable.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0C5QY5YH1._AC_US200_.jpg" alt="Every Dog Mom Needs " class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Every Dog Mom Needs This Water Bottle! 🐕</h3>
-                <span class="text-xs text-pink-500">Pet Supplies</span>
-            </a>
-            <a href="products/cat-tower-with-scratching-post.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0C3P7XGKL._AC_US200_.jpg" alt="My Cat's Dream Tower" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">My Cat's Dream Tower Finally Arrived! 🐱🏰</h3>
-                <span class="text-xs text-pink-500">Pet Supplies</span>
-            </a>
-            <a href="products/automatic-pet-feeder.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08BZQDJJ5V._AC_US200_.jpg" alt="This Pet Feeder is a" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Pet Feeder is a Total Lifesaver for</h3>
-                <span class="text-xs text-pink-500">Pet Supplies</span>
-            </a>
-            <a href="products/electric-face-cleanser-brush.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08T5R4J3W._AC_US200_.jpg" alt="This Face Cleanser G" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Face Cleanser Gave Me My Glow Back!</h3>
-                <span class="text-xs text-pink-500">Beauty & Self Care</span>
-            </a>
-            <a href="products/led-vanity-mirror.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B07YFZPR9H._AC_US200_.jpg" alt="The Vanity Mirror Th" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Vanity Mirror That Makes Getting Rea</h3>
-                <span class="text-xs text-pink-500">Beauty & Self Care</span>
-            </a>
-            <a href="products/silk-pillowcase-set.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B07YFN4YQ8._AC_US200_.jpg" alt="Silk Pillowcases: Th" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Silk Pillowcases: The Beauty Secret Ever</h3>
-                <span class="text-xs text-pink-500">Beauty & Self Care</span>
-            </a>
-            <a href="products/ergonomic-office-chair.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08FBBTSHM._AC_US200_.jpg" alt="This Chair Fixed My " class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Chair Fixed My Back Pain After Year</h3>
-                <span class="text-xs text-pink-500">Office & Productivity</span>
-            </a>
-            <a href="products/cable-management-box.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08J4D3HGY._AC_US200_.jpg" alt="The Desk Organizer T" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Desk Organizer That Finally Made My </h3>
-                <span class="text-xs text-pink-500">Office & Productivity</span>
-            </a>
-            <a href="products/standing-desk-converter.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08T5Q8J9K._AC_US200_.jpg" alt="Standing Desk Conver" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Standing Desk Converter: The Work From H</h3>
-                <span class="text-xs text-pink-500">Office & Productivity</span>
-            </a>
-            <a href="products/solar-garden-lights.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B07YQY8QXP._AC_US200_.jpg" alt="These Solar Lights T" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These Solar Lights Turned My Yard Into a</h3>
-                <span class="text-xs text-pink-500">Garden & Outdoor</span>
-            </a>
-            <a href="products/expandable-garden-hose.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08T5P8J9K._AC_US200_.jpg" alt="Finally a Garden Hos" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Finally a Garden Hose That Doesn't Fight</h3>
-                <span class="text-xs text-pink-500">Garden & Outdoor</span>
-            </a>
-            <a href="products/outdoor-string-lights.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08FBB7JWX._AC_US200_.jpg" alt="String Lights That M" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">String Lights That Make Every Evening Fe</h3>
-                <span class="text-xs text-pink-500">Garden & Outdoor</span>
-            </a>
-            <a href="products/diaper-backpack.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08T5Q8H9K._AC_US200_.jpg" alt="This Diaper Backpack" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Diaper Backpack is Chic AND Functio</h3>
-                <span class="text-xs text-pink-500">Baby & Kids</span>
-            </a>
-            <a href="products/kids-learning-tablet.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08FBB6JWY._AC_US200_.jpg" alt="The Kids Tablet That" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Kids Tablet That Keeps Little Ones E</h3>
-                <span class="text-xs text-pink-500">Baby & Kids</span>
-            </a>
-            <a href="products/baby-play-mat.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B08T5R4H9K._AC_US200_.jpg" alt="This Play Mat is Sof" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Play Mat is Soft, Cute, AND Safe! 🧸</h3>
-                <span class="text-xs text-pink-500">Baby & Kids</span>
-            </a>
-            <a href="products/the-home-label-velvet-drawer-o.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0C8PQXQK4._AC_US200_.jpg" alt="Drawer organizers do" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Drawer organizers don't have to be borin</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/mdesign-plastic-storage-bins.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B01MR2W0GC._AC_US200_.jpg" alt="Finally an organized" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Finally an organized closet! These bins </h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/youcopia-storalid-organizer.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B00T2O2O9G._AC_US200_.jpg" alt="Why didn't I get thi" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Why didn't I get this sooner?! Tupperwar</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/simplehouseware-stackable-can-.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B07YVPFJ7S._AC_US200_.jpg" alt="Canned goods have ne" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">Canned goods have never looked so good! </h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/idesign-clarity-adhesive-showe.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B01MR2RWMG._AC_US200_.jpg" alt="No tools needed but " class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">No tools needed but so sturdy! My shower</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/oxo-good-grips-pop-container-s.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B00T2O1V0U._AC_US200_.jpg" alt="These containers mak" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These containers make my kitchen look li</h3>
-                <span class="text-xs text-pink-500">Home Organization</span>
-            </a>
-            <a href="products/pakt-one-45l-travel-backpack.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLX7._AC_US200_.jpg" alt="This Carry-On Backpa" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Carry-On Backpack is the Travel Upg</h3>
-                <span class="text-xs text-pink-500">Travel & Outdoors</span>
-            </a>
-            <a href="products/bago便旅行背包.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLX8._AC_US200_.jpg" alt="This Backpack is a G" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Backpack is a Game Changer for Digi</h3>
-                <span class="text-xs text-pink-500">Travel & Outdoors</span>
-            </a>
-            <a href="products/outdoor-divas-camping-tent.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLX9._AC_US200_.jpg" alt="This Camping Tent Se" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">This Camping Tent Sets Up in 60 Seconds!</h3>
-                <span class="text-xs text-pink-500">Travel & Outdoors</span>
-            </a>
-            <a href="products/joying-wedding-card-box.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLY0._AC_US200_.jpg" alt="The Wedding Detail E" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Wedding Detail Everyone Forgets But </h3>
-                <span class="text-xs text-pink-500">Wedding & Parties</span>
-            </a>
-            <a href="products/mudder-disposable-party-cups.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLY1._AC_US200_.jpg" alt="These Wedding Cups S" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">These Wedding Cups Saved Us Hundreds of </h3>
-                <span class="text-xs text-pink-500">Wedding & Parties</span>
-            </a>
-            <a href="products/veight-bridesmaid-proposal-box.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLY2._AC_US200_.jpg" alt="The Cutest Way to As" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Cutest Way to Ask Your Bridesmaids! </h3>
-                <span class="text-xs text-pink-500">Wedding & Parties</span>
-            </a>
-            <a href="products/leuchtturm1917-notebook.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLY3._AC_US200_.jpg" alt="The Journal That Cha" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Journal That Changed My Planning Gam</h3>
-                <span class="text-xs text-pink-500">Books & Stationery</span>
-            </a>
-            <a href="products/muji-gel-ink-pen.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLY4._AC_US200_.jpg" alt="The Japanese Pens Th" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Japanese Pens That Make Everything L</h3>
-                <span class="text-xs text-pink-500">Books & Stationery</span>
-            </a>
-            <a href="products/book-darts-bookmarks.html" class="bg-white rounded-xl shadow p-2 hover:shadow-lg transition">
-                <img src="https://images-na.ssl-images-amazon.com/images/I/B0BSHXFLY5._AC_US200_.jpg" alt="The Book Accessory T" class="w-full h-32 object-contain mb-2" onerror="this.style.display='none'">
-                <h3 class="text-sm font-medium line-clamp-2">The Book Accessory That Book Lovers Need</h3>
-                <span class="text-xs text-pink-500">Books & Stationery</span>
-            </a>
+    <!-- Carousel -->
+    <div class="bg-gradient-to-r from-pink-500 to-rose-500 py-5 overflow-hidden">
+        <div class="scroll flex whitespace-nowrap">
+            
+        <a href="https://www.amazon.com/dp/B01KP12IO4?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🏠</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Apothecary Jar</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0C4PRH1NT?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🏠</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">POV: My Pantry Final</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CQQ97WB8?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🏠</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">This Water Jug Holde</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0BXMNJDW3?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🔌</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Smart Plugs Ma</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B091FXQQMQ?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🔌</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">The Kasa Plugs Every</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CKM8CF7N?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🔌</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Finally a Smart Plug</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B07M84GZC5?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">💪</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">This Collapsible Bot</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0B8Y3RB3P?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">💪</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">The Water Bottle Tha</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0C4XZD5PQ?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">💪</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Travel Hack: This Co</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0DMST2FHK?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">👗</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">My Stanley Cup Final</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0DT182V7V?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">👗</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Smart Plugs Gi</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B09Z7TVWN1?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🍳</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Spice Jars Mad</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CMQC79L4?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🍳</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Meal Prep Game Chang</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B07QXC72NK?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🍳</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">The Glass Jars That </p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0C5QY5YH1?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🐾</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Every Dog Mom Needs </p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B01KP12IO4?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🏠</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Apothecary Jar</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0C4PRH1NT?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🏠</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">POV: My Pantry Final</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CQQ97WB8?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🏠</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">This Water Jug Holde</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0BXMNJDW3?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🔌</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Smart Plugs Ma</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B091FXQQMQ?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🔌</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">The Kasa Plugs Every</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CKM8CF7N?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🔌</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Finally a Smart Plug</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B07M84GZC5?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">💪</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">This Collapsible Bot</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0B8Y3RB3P?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">💪</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">The Water Bottle Tha</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0C4XZD5PQ?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">💪</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Travel Hack: This Co</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0DMST2FHK?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">👗</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">My Stanley Cup Final</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0DT182V7V?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">👗</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Smart Plugs Gi</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B09Z7TVWN1?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🍳</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">These Spice Jars Mad</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0CMQC79L4?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🍳</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Meal Prep Game Chang</p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B07QXC72NK?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🍳</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">The Glass Jars That </p>
+            </div>
+        </a>
+        <a href="https://www.amazon.com/dp/B0C5QY5YH1?tag=ilikeitib-20" target="_blank" class="flex-shrink-0 w-28 mx-2 block">
+            <div class="bg-white rounded-lg shadow p-3 text-center">
+                <div class="text-4xl">🐾</div>
+                <p class="text-xs text-gray-600 mt-1 truncate">Every Dog Mom Needs </p>
+            </div>
+        </a>
         </div>
     </div>
-    
-    <footer class="bg-gray-800 text-gray-400 py-8 mt-12">
-        <div class="text-center">
-            <p>© 2026 ILikeItIBuyIt</p>
+
+    <!-- Nav -->
+    <nav class="bg-white shadow">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="text-xl font-bold text-pink-600">ILikeItIBuyIt</span>
+            <div class="flex gap-4 text-sm">
+                <a href="#about" class="text-gray-600">About</a>
+                <a href="#products" class="text-gray-600">Products</a>
+                <a href="#disclosure" class="text-gray-600">Disclosure</a>
+            </div>
         </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="bg-white py-12 text-center px-4">
+        <h1 class="text-3xl font-bold text-gray-800">Products Worth <span class="text-pink-600">Pinning</span></h1>
+        <p class="text-gray-500 mt-2">Honest recommendations for home, kitchen, fitness & everyday essentials</p>
+        <a href="#products" class="inline-block mt-4 bg-pink-600 text-white px-6 py-2 rounded-full font-medium">Browse All 44 Products</a>
+    </header>
+
+    <!-- Products -->
+    <section id="products" class="py-10 px-4">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-xl font-bold text-center mb-6">All Products (44)</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                
+                <a href="products/mdesign-small-apothecary-.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These Apothecary Jars Transformed My Bat</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/vtopmart-10-pcs-flour-and.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">POV: My Pantry Finally Looks Like a Maga</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/housolution-3-tier-water-.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Water Jug Holder Changed My Kitchen</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/tp-link-tapo-matter-smart.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🔌</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Tech & Smart Home</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These Smart Plugs Made My Life SO Much E</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/kasa-smart-plug-ultra-min.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🔌</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Tech & Smart Home</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Kasa Plugs Every Lazy Girl Needs! 🛋️</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/govee-smart-plug-with-ene.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🔌</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Tech & Smart Home</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Finally a Smart Plug That Actually Saves</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/waterstoragecube-premium-.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💪</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Health & Fitness</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Collapsible Bottle is My New Advent</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/digjuper-stainless-steel-.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💪</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Health & Fitness</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Water Bottle That Keeps Drinks Cold </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/taketoday-collapsible-wat.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💪</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Health & Fitness</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Travel Hack: This Collapsible Bottle is </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/ecohub-water-bottle-holde.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">👗</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Fashion & Accessories</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">My Stanley Cup Finally Has the Accessory</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/linkind-smart-plug-with-l.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">👗</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Fashion & Accessories</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These Smart Plugs Give the Coziest Night</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/aisiprin-glass-spice-jars.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🍳</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Kitchen & Cooking</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These Spice Jars Made My Kitchen Look Pi</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/netany-overnight-oats-con.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🍳</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Kitchen & Cooking</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Meal Prep Game Changed Forever! 🥗💖</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/comsaf-airtight-glass-jar.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🍳</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Kitchen & Cooking</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Glass Jars That Organizes Everything</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/dog-water-bottle-portable.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🐾</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Pet Supplies</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Every Dog Mom Needs This Water Bottle! 🐕</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/cat-tower-with-scratching.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🐾</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Pet Supplies</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">My Cat's Dream Tower Finally Arrived! 🐱🏰</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/automatic-pet-feeder.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🐾</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Pet Supplies</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Pet Feeder is a Total Lifesaver for</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/electric-face-cleanser-br.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">✨</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Beauty & Self Care</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Face Cleanser Gave Me My Glow Back!</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/led-vanity-mirror.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">✨</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Beauty & Self Care</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Vanity Mirror That Makes Getting Rea</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/silk-pillowcase-set.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">✨</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Beauty & Self Care</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Silk Pillowcases: The Beauty Secret Ever</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/ergonomic-office-chair.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💼</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Office & Productivity</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Chair Fixed My Back Pain After Year</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/cable-management-box.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💼</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Office & Productivity</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Desk Organizer That Finally Made My </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/standing-desk-converter.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💼</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Office & Productivity</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Standing Desk Converter: The Work From H</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/solar-garden-lights.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🌱</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Garden & Outdoor</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These Solar Lights Turned My Yard Into a</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/expandable-garden-hose.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🌱</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Garden & Outdoor</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Finally a Garden Hose That Doesn't Fight</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/outdoor-string-lights.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🌱</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Garden & Outdoor</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">String Lights That Make Every Evening Fe</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/diaper-backpack.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">👶</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Baby & Kids</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Diaper Backpack is Chic AND Functio</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/kids-learning-tablet.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">👶</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Baby & Kids</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Kids Tablet That Keeps Little Ones E</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/baby-play-mat.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">👶</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Baby & Kids</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Play Mat is Soft, Cute, AND Safe! 🧸</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/the-home-label-velvet-dra.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Drawer organizers don't have to be borin</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/mdesign-plastic-storage-b.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Finally an organized closet! These bins </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/youcopia-storalid-organiz.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Why didn't I get this sooner?! Tupperwar</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/simplehouseware-stackable.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">Canned goods have never looked so good! </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/idesign-clarity-adhesive-.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">No tools needed but so sturdy! My shower</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/oxo-good-grips-pop-contai.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">🏠</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Home Organization</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These containers make my kitchen look li</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/pakt-one-45l-travel-backp.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">✈️</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Travel & Outdoors</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Carry-On Backpack is the Travel Upg</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/bago便旅行背包.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">✈️</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Travel & Outdoors</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Backpack is a Game Changer for Digi</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/outdoor-divas-camping-ten.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">✈️</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Travel & Outdoors</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">This Camping Tent Sets Up in 60 Seconds!</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/joying-wedding-card-box.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💒</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Wedding & Parties</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Wedding Detail Everyone Forgets But </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/mudder-disposable-party-c.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💒</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Wedding & Parties</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">These Wedding Cups Saved Us Hundreds of </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/veight-bridesmaid-proposa.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">💒</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Wedding & Parties</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Cutest Way to Ask Your Bridesmaids! </h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/leuchtturm1917-notebook.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">📚</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Books & Stationery</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Journal That Changed My Planning Gam</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/muji-gel-ink-pen.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">📚</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Books & Stationery</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Japanese Pens That Make Everything L</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+                <a href="products/book-darts-bookmarks.html" class="block bg-white rounded-xl shadow overflow-hidden hover:shadow-lg transition">
+                    <div class="h-28 flex items-center justify-center bg-gradient-to-br from-pink-50 to-rose-50">
+                        <span class="text-5xl">📚</span>
+                    </div>
+                    <div class="p-3">
+                        <span class="text-xs text-pink-600 font-medium">Books & Stationery</span>
+                        <h3 class="text-sm text-gray-800 line-clamp-2 mt-1">The Book Accessory That Book Lovers Need</h3>
+                        <span class="text-xs text-pink-600 mt-1 block font-semibold">View Details →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-white py-10 px-4">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-xl font-bold mb-3">About ILikeItIBuyIt</h2>
+            <p class="text-gray-600 text-sm">Hey! I'm a Pinterest enthusiast who shares genuinely useful products I believe in. When you buy through my links, I earn a small commission at no extra cost to you. Thanks for the support! #ad</p>
+        </div>
+    </section>
+
+    <!-- Disclosure -->
+    <section id="disclosure" class="py-8 px-4 bg-gray-100">
+        <div class="max-w-xl mx-auto text-center">
+            <p class="text-xs text-gray-500">ILikeItIBuyIt is a participant in the Amazon Associates Program. This site contains affiliate links. When you purchase through our links, we may earn a commission.</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-400 py-4 text-center text-sm">
+        <p>© 2026 ILikeItIBuyIt | thebestfinds@proton.me</p>
     </footer>
 </body>
 </html>
