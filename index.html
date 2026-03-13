@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olivia's Honest Favorites | ILikeItIBuyIt</title>
-<meta name="description" content="Honest product recommendations from Olivia. After testing hundreds of products, these are my genuine favorites.">
+<meta name="description" content="Honest product recommendations from Olivia.">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>
@@ -18,7 +18,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 </style>
 </head>
 <body class="bg-stone-50 dark:bg-stone-900 transition-colors">
-<!-- Sticky Header -->
 <header class="fixed top-0 left-0 right-0 bg-white/80 dark:bg-stone-800/80 backdrop-blur-md shadow-sm z-50">
 <div class="max-w-6xl mx-auto px-4 py-3">
 <div class="flex items-center justify-between gap-4">
@@ -28,24 +27,19 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="flex items-center gap-2">
 <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-stone-100 dark:hover:bg-stone-700">🌙</button>
-<a href="https://www.pinterest.com/ilikeitibuyit/" target="_blank" class="p-2 text-rose-500 hover:bg-rose-50 dark:hover:bg-stone-700 rounded-full" title="Pinterest">📌</a>
+<a href="https://www.pinterest.com/ilikeitibuyit/" target="_blank" class="p-2 text-rose-500 hover:bg-rose-50 dark:hover:bg-stone-700 rounded-full">📌</a>
 </div>
 </div>
 </div>
 </header>
-
-<!-- Hero -->
 <section class="pt-24 pb-8 bg-gradient-to-br from-rose-100 via-orange-50 to-amber-100 dark:from-stone-800 dark:via-stone-700 dark:to-stone-800">
 <div class="max-w-4xl mx-auto px-4 text-center">
 <h2 class="text-3xl md:text-4xl font-bold text-stone-800 dark:text-white mb-2">Products Olivia Actually Uses & Loves</h2>
 <p class="text-stone-600 dark:text-stone-300 mb-6">After testing hundreds of products, these are my genuine favorites.</p>
-<!-- Category Filters -->
 <div class="flex flex-wrap justify-center gap-2" id="categories"><button onclick="filterCategory('health-fitness')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">💪 Health & Fit</button><button onclick="filterCategory('travel-outdoors')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">✈️ Travel & Out</button><button onclick="filterCategory('home-organization')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">🔌 Tech & Smart</button><button onclick="filterCategory('fashion')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">👗 Fashion</button><button onclick="filterCategory('baby-kids')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">👶 Baby & Kids</button><button onclick="filterCategory('books-stationery')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">📚 Books & Stat</button><button onclick="filterCategory('kitchen')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">🍳 Kitchen</button><button onclick="filterCategory('garden')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">🌱 Garden</button><button onclick="filterCategory('home-organization')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">🏠 Home Org</button><button onclick="filterCategory('office')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">💼 Office</button><button onclick="filterCategory('pet')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">🐾 Pet</button><button onclick="filterCategory('beauty')" class="px-3 py-1.5 bg-white dark:bg-stone-700 rounded-full text-xs shadow hover:shadow-md transition whitespace-nowrap">✨ Beauty</button></div>
 <button onclick="filterCategory('all')" class="mt-3 px-4 py-1.5 bg-rose-500 text-white rounded-full text-xs hover:bg-rose-600">All</button>
 </div>
 </section>
-
-<!-- Trending -->
 <section class="py-6 px-4">
 <div class="max-w-6xl mx-auto">
 <h3 class="text-lg font-bold text-stone-800 dark:text-white mb-4">🔥 Trending This Week</h3>
@@ -61,496 +55,443 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 <div class="p-3">
 <div class="text-xs text-rose-600 font-medium">Health & Fitness</div>
 <h4 class="font-semibold text-xs line-clamp-2">The Water Bottle That Keeps Drinks Cold </h4>
-<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span><span class="text-xs bg-blue-100 text-blue-600 px-1 rounded">Prime</span></div>
+<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span></div>
 </div>
 </div><div class="min-w-[200px] bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="openModal(11)">
 <img src="images/product-12.jpg" class="h-32 w-full object-cover" loading="lazy">
 <div class="p-3">
 <div class="text-xs text-rose-600 font-medium">Kitchen & Cooking</div>
 <h4 class="font-semibold text-xs line-clamp-2">These Spice Jars Made My Kitchen Look Pi</h4>
-<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span><span class="text-xs bg-blue-100 text-blue-600 px-1 rounded">Prime</span></div>
-</div>
-</div><div class="min-w-[200px] bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="openModal(15)">
-<img src="images/product-16.jpg" class="h-32 w-full object-cover" loading="lazy">
-<div class="p-3">
-<div class="text-xs text-rose-600 font-medium">Pet Supplies</div>
-<h4 class="font-semibold text-xs line-clamp-2">My Cat's Dream Tower Finally Arrived! 🐱🏰</h4>
 <div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span></div>
 </div>
-</div><div class="min-w-[200px] bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="openModal(19)">
-<img src="images/product-20.jpg" class="h-32 w-full object-cover" loading="lazy">
+</div><div class="min-w-[200px] bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="openModal(18)">
+<img src="images/product-19.jpg" class="h-32 w-full object-cover" loading="lazy">
 <div class="p-3">
 <div class="text-xs text-rose-600 font-medium">Beauty & Self Care</div>
 <h4 class="font-semibold text-xs line-clamp-2">Silk Pillowcases: The Beauty Secret Ever</h4>
-<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span><span class="text-xs bg-blue-100 text-blue-600 px-1 rounded">Prime</span></div>
+<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span></div>
+</div>
+</div><div class="min-w-[200px] bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="openModal(27)">
+<img src="images/product-28.jpg" class="h-32 w-full object-cover" loading="lazy">
+<div class="p-3">
+<div class="text-xs text-rose-600 font-medium">Baby & Kids</div>
+<h4 class="font-semibold text-xs line-clamp-2">This Play Mat is Soft, Cute, AND Safe! 🧸</h4>
+<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span></div>
 </div>
 </div><div class="min-w-[200px] bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition cursor-pointer" onclick="openModal(28)">
 <img src="images/product-29.jpg" class="h-32 w-full object-cover" loading="lazy">
 <div class="p-3">
-<div class="text-xs text-rose-600 font-medium">Baby & Kids</div>
-<h4 class="font-semibold text-xs line-clamp-2">This Play Mat is Soft, Cute, AND Safe! 🧸</h4>
-<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span><span class="text-xs bg-blue-100 text-blue-600 px-1 rounded">Prime</span></div>
+<div class="text-xs text-rose-600 font-medium">Home Organization</div>
+<h4 class="font-semibold text-xs line-clamp-2">Drawer organizers don't have to be borin</h4>
+<div class="flex items-center gap-2 mt-1"><span class="text-xs">⭐ 4.7 stars</span></div>
 </div>
 </div></div>
 </div>
 </section>
-
-<!-- Products Grid -->
 <section class="py-8 px-4">
 <div class="max-w-6xl mx-auto">
 <div class="flex justify-between items-center mb-6">
-<div id="count" class="text-sm text-stone-500 dark:text-stone-400">41 products</div>
+<div id="count" class="text-sm text-stone-500 dark:text-stone-400">40 products</div>
 </div>
 <div id="products" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(0)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('These Apothecary Jars Transfor','https://www.amazon.com/dp/B08PB8ZTK1?tag=ilikeitib-20','images/product-1.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('These Apothecary Jars Transfor','https://www.amazon.com/dp/B08PB8ZTK1?tag=ilikeitib-20','images/product-1.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">These Apothecary Jars Transformed My Bathroom! 🛁💕</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(1)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('POV: My Pantry Finally Looks L','https://www.amazon.com/dp/B0C4PRH1NT?tag=ilikeitib-20','images/product-2.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('POV: My Pantry Finally Looks L','https://www.amazon.com/dp/B0C4PRH1NT?tag=ilikeitib-20','images/product-2.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">POV: My Pantry Finally Looks Like a Magazine Cover</h3>
-<div class="flex items-center gap-2 mt-2"></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(2)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-3.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Water Jug Holder Changed ','https://www.amazon.com/dp/B0CHYJ78XY?tag=ilikeitib-20','images/product-3.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Water Jug Holder Changed ','https://www.amazon.com/dp/B0CHYJ78XY?tag=ilikeitib-20','images/product-3.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">This Water Jug Holder Changed My Kitchen Forever! </h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="tech-smart-home" onclick="openModal(3)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-4.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🔌 Tech & Sma</div>
-<button onclick="event.stopPropagation();saveToPinterest('These Smart Plugs Made My Life','https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20','images/product-4.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🔌</div>
+<button onclick="event.stopPropagation();saveToPinterest('These Smart Plugs Made My Life','https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20','images/product-4.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">These Smart Plugs Made My Life SO Much Easier! 🔌💡</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="tech-smart-home" onclick="openModal(4)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-5.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🔌 Tech & Sma</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Kasa Plugs Every Lazy Girl','https://www.amazon.com/dp/B091FXLMS8?tag=ilikeitib-20','images/product-5.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🔌</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Kasa Plugs Every Lazy Girl','https://www.amazon.com/dp/B091FXLMS8?tag=ilikeitib-20','images/product-5.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">The Kasa Plugs Every Lazy Girl Needs! 🛋️😴</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="tech-smart-home" onclick="openModal(5)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-6.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.3 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🔌 Tech & Sma</div>
-<button onclick="event.stopPropagation();saveToPinterest('Finally a Smart Plug That Actu','https://www.amazon.com/dp/B0CKM8CF7N?tag=ilikeitib-20','images/product-6.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🔌</div>
+<button onclick="event.stopPropagation();saveToPinterest('Finally a Smart Plug That Actu','https://www.amazon.com/dp/B0CKM8CF7N?tag=ilikeitib-20','images/product-6.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">Finally a Smart Plug That Actually Saves Money! 💰🌍</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="health-fitness" onclick="openModal(6)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-7.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💪 Health & F</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Collapsible Bottle is My ','https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20','images/product-7.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💪</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Collapsible Bottle is My ','https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20','images/product-7.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">This Collapsible Bottle is My New Adventure Must-H</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="health-fitness" onclick="openModal(7)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-8.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💪 Health & F</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Water Bottle That Keeps Dr','https://www.amazon.com/dp/B0B8Y3RB3P?tag=ilikeitib-20','images/product-8.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💪</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Water Bottle That Keeps Dr','https://www.amazon.com/dp/B0B8Y3RB3P?tag=ilikeitib-20','images/product-8.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">The Water Bottle That Keeps Drinks Cold for DAYS! </h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="health-fitness" onclick="openModal(8)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-9.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💪 Health & F</div>
-<button onclick="event.stopPropagation();saveToPinterest('Travel Hack: This Collapsible ','https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20','images/product-9.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💪</div>
+<button onclick="event.stopPropagation();saveToPinterest('Travel Hack: This Collapsible ','https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20','images/product-9.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">Travel Hack: This Collapsible Bottle is Game-Chang</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="fashion-accessories" onclick="openModal(9)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-10.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👗 Fashion & </div>
-<button onclick="event.stopPropagation();saveToPinterest('My Stanley Cup Finally Has the','https://www.amazon.com/dp/B0DMST2FHK?tag=ilikeitib-20','images/product-10.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👗</div>
+<button onclick="event.stopPropagation();saveToPinterest('My Stanley Cup Finally Has the','https://www.amazon.com/dp/B0DMST2FHK?tag=ilikeitib-20','images/product-10.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">My Stanley Cup Finally Has the Accessory It Deserv</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="fashion-accessories" onclick="openModal(10)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-11.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👗 Fashion & </div>
-<button onclick="event.stopPropagation();saveToPinterest('These Smart Plugs Give the Coz','https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20','images/product-11.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👗</div>
+<button onclick="event.stopPropagation();saveToPinterest('These Smart Plugs Give the Coz','https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20','images/product-11.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">These Smart Plugs Give the Coziest Night Light Vib</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="kitchen-cooking" onclick="openModal(11)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-12.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🍳 Kitchen & </div>
-<button onclick="event.stopPropagation();saveToPinterest('These Spice Jars Made My Kitch','https://www.amazon.com/dp/B0B2LLV1FL?tag=ilikeitib-20','images/product-12.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🍳</div>
+<button onclick="event.stopPropagation();saveToPinterest('These Spice Jars Made My Kitch','https://www.amazon.com/dp/B0B2LLV1FL?tag=ilikeitib-20','images/product-12.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">These Spice Jars Made My Kitchen Look Pinterest-Pe</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="kitchen-cooking" onclick="openModal(12)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-13.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🍳 Kitchen & </div>
-<button onclick="event.stopPropagation();saveToPinterest('Meal Prep Game Changed Forever','https://www.amazon.com/dp/B0DKFK9LTK?tag=ilikeitib-20','images/product-13.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🍳</div>
+<button onclick="event.stopPropagation();saveToPinterest('Meal Prep Game Changed Forever','https://www.amazon.com/dp/B0DKFK9LTK?tag=ilikeitib-20','images/product-13.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">Meal Prep Game Changed Forever! 🥗💖</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="kitchen-cooking" onclick="openModal(13)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-14.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🍳 Kitchen & </div>
-<button onclick="event.stopPropagation();saveToPinterest('The Glass Jars That Organizes ','https://www.amazon.com/dp/B07QXC72NK?tag=ilikeitib-20','images/product-14.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🍳</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Glass Jars That Organizes ','https://www.amazon.com/dp/B07QXC72NK?tag=ilikeitib-20','images/product-14.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">The Glass Jars That Organizes Everything Beautiful</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="pet-supplies" onclick="openModal(14)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-15.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🐾 Pet Suppli</div>
-<button onclick="event.stopPropagation();saveToPinterest('Every Dog Mom Needs This Water','https://www.amazon.com/dp/B0C5QY5YH1?tag=ilikeitib-20','images/product-15.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🐾</div>
+<button onclick="event.stopPropagation();saveToPinterest('Every Dog Mom Needs This Water','https://www.amazon.com/dp/B0C5QY5YH1?tag=ilikeitib-20','images/product-15.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">Every Dog Mom Needs This Water Bottle! 🐕❤️</h3>
-<div class="flex items-center gap-2 mt-2"></div>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="pet-supplies" onclick="openModal(15)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-16.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🐾 Pet Suppli</div>
-<button onclick="event.stopPropagation();saveToPinterest('My Cat's Dream Tower Finally A','https://www.amazon.com/dp/B0C3P7XGKL?tag=ilikeitib-20','images/product-16.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">My Cat's Dream Tower Finally Arrived! 🐱🏰</h3>
-<div class="flex items-center gap-2 mt-2"></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="pet-supplies" onclick="openModal(16)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-17.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🐾 Pet Suppli</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Pet Feeder is a Total Lif','https://www.amazon.com/dp/B0DF7H6SGZ?tag=ilikeitib-20','images/product-17.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🐾</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Pet Feeder is a Total Lif','https://www.amazon.com/dp/B0DF7H6SGZ?tag=ilikeitib-20','images/product-16.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">This Pet Feeder is a Total Lifesaver for Busy Moms</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="beauty-self-care" onclick="openModal(16)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-17.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.3 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✨</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Face Cleanser Gave Me My ','https://www.amazon.com/dp/B0CZ8H7FGR?tag=ilikeitib-20','images/product-17.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">This Face Cleanser Gave Me My Glow Back! ✨💆‍♀️</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="beauty-self-care" onclick="openModal(17)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-18.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.3 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✨ Beauty & S</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Face Cleanser Gave Me My ','https://www.amazon.com/dp/B0CZ8H7FGR?tag=ilikeitib-20','images/product-18.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✨</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Vanity Mirror That Makes G','https://www.amazon.com/dp/B0GGJ745BK?tag=ilikeitib-20','images/product-18.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">This Face Cleanser Gave Me My Glow Back! ✨💆‍♀️</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
+<h3 class="font-semibold text-sm line-clamp-2">The Vanity Mirror That Makes Getting Ready Feel Ma</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="beauty-self-care" onclick="openModal(18)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-19.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✨ Beauty & S</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Vanity Mirror That Makes G','https://www.amazon.com/dp/B0GGJ745BK?tag=ilikeitib-20','images/product-19.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">The Vanity Mirror That Makes Getting Ready Feel Ma</h3>
-<div class="flex items-center gap-2 mt-2"></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="beauty-self-care" onclick="openModal(19)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-20.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✨ Beauty & S</div>
-<button onclick="event.stopPropagation();saveToPinterest('Silk Pillowcases: The Beauty S','https://www.amazon.com/dp/B09BFQG17F?tag=ilikeitib-20','images/product-20.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✨</div>
+<button onclick="event.stopPropagation();saveToPinterest('Silk Pillowcases: The Beauty S','https://www.amazon.com/dp/B09BFQG17F?tag=ilikeitib-20','images/product-19.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">Silk Pillowcases: The Beauty Secret Everyone's Tal</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="office-productivity" onclick="openModal(19)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-20.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💼</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Chair Fixed My Back Pain ','https://www.amazon.com/dp/B0CP22DQQS?tag=ilikeitib-20','images/product-20.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">This Chair Fixed My Back Pain After Years of Suffe</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="office-productivity" onclick="openModal(20)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-21.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💼 Office & P</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Chair Fixed My Back Pain ','https://www.amazon.com/dp/B0CP22DQQS?tag=ilikeitib-20','images/product-21.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💼</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Desk Organizer That Finall','https://www.amazon.com/dp/B0DP2H653T?tag=ilikeitib-20','images/product-21.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">This Chair Fixed My Back Pain After Years of Suffe</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">The Desk Organizer That Finally Made My Space Feel</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="office-productivity" onclick="openModal(21)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-22.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💼 Office & P</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Desk Organizer That Finall','https://www.amazon.com/dp/B0DP2H653T?tag=ilikeitib-20','images/product-22.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">The Desk Organizer That Finally Made My Space Feel</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="office-productivity" onclick="openModal(22)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-23.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.3 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💼 Office & P</div>
-<button onclick="event.stopPropagation();saveToPinterest('Standing Desk Converter: The W','https://www.amazon.com/dp/B075JYG2TB?tag=ilikeitib-20','images/product-23.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">💼</div>
+<button onclick="event.stopPropagation();saveToPinterest('Standing Desk Converter: The W','https://www.amazon.com/dp/B075JYG2TB?tag=ilikeitib-20','images/product-22.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">Standing Desk Converter: The Work From Home Upgrad</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="garden-outdoor" onclick="openModal(22)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-23.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🌱</div>
+<button onclick="event.stopPropagation();saveToPinterest('These Solar Lights Turned My Y','https://www.amazon.com/dp/B0D3K9FC7Z?tag=ilikeitib-20','images/product-23.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">These Solar Lights Turned My Yard Into a Fairy Tal</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="garden-outdoor" onclick="openModal(23)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-24.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🌱 Garden & O</div>
-<button onclick="event.stopPropagation();saveToPinterest('These Solar Lights Turned My Y','https://www.amazon.com/dp/B0D3K9FC7Z?tag=ilikeitib-20','images/product-24.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🌱</div>
+<button onclick="event.stopPropagation();saveToPinterest('Finally a Garden Hose That Doe','https://www.amazon.com/dp/B003TFE7ZM?tag=ilikeitib-20','images/product-24.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">These Solar Lights Turned My Yard Into a Fairy Tal</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
+<h3 class="font-semibold text-sm line-clamp-2">Finally a Garden Hose That Doesn't Fight Back! 🌱😂</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="garden-outdoor" onclick="openModal(24)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-25.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🌱 Garden & O</div>
-<button onclick="event.stopPropagation();saveToPinterest('Finally a Garden Hose That Doe','https://www.amazon.com/dp/B003TFE7ZM?tag=ilikeitib-20','images/product-25.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">Finally a Garden Hose That Doesn't Fight Back! 🌱😂</h3>
-<div class="flex items-center gap-2 mt-2"></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="garden-outdoor" onclick="openModal(25)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-26.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🌱 Garden & O</div>
-<button onclick="event.stopPropagation();saveToPinterest('String Lights That Make Every ','https://www.amazon.com/dp/B0DX1WPB9J?tag=ilikeitib-20','images/product-26.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🌱</div>
+<button onclick="event.stopPropagation();saveToPinterest('String Lights That Make Every ','https://www.amazon.com/dp/B0DX1WPB9J?tag=ilikeitib-20','images/product-25.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">String Lights That Make Every Evening Feel Special</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="baby-kids" onclick="openModal(25)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-26.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👶</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Diaper Backpack is Chic A','https://www.amazon.com/dp/B0C86S6GLQ?tag=ilikeitib-20','images/product-26.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">This Diaper Backpack is Chic AND Functional! 👶👜</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="baby-kids" onclick="openModal(26)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-27.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👶 Baby & Kid</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Diaper Backpack is Chic A','https://www.amazon.com/dp/B0C86S6GLQ?tag=ilikeitib-20','images/product-27.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.3 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👶</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Kids Tablet That Keeps Lit','https://www.amazon.com/dp/B07PLG93NS?tag=ilikeitib-20','images/product-27.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">This Diaper Backpack is Chic AND Functional! 👶👜</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">The Kids Tablet That Keeps Little Ones Entertained</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="baby-kids" onclick="openModal(27)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-28.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.3 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👶 Baby & Kid</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Kids Tablet That Keeps Lit','https://www.amazon.com/dp/B07PLG93NS?tag=ilikeitib-20','images/product-28.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">The Kids Tablet That Keeps Little Ones Entertained</h3>
-<div class="flex items-center gap-2 mt-2"></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="baby-kids" onclick="openModal(28)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-29.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👶 Baby & Kid</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Play Mat is Soft, Cute, A','https://www.amazon.com/dp/B07GY1PH4K?tag=ilikeitib-20','images/product-29.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">👶</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Play Mat is Soft, Cute, A','https://www.amazon.com/dp/B07GY1PH4K?tag=ilikeitib-20','images/product-28.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">This Play Mat is Soft, Cute, AND Safe! 🧸💖</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(28)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-29.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('Drawer organizers don't have t','https://www.amazon.com/dp/B0C8PQXQK4?tag=ilikeitib-20','images/product-29.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">Drawer organizers don't have to be boring! These a</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(29)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-30.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('Drawer organizers don't have t','https://www.amazon.com/dp/B0C8PQXQK4?tag=ilikeitib-20','images/product-30.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('Finally an organized closet! T','https://www.amazon.com/dp/B01MR2W0GC?tag=ilikeitib-20','images/product-30.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">Drawer organizers don't have to be boring! These a</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">Finally an organized closet! These bins make every</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(30)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-31.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('Finally an organized closet! T','https://www.amazon.com/dp/B01MR2W0GC?tag=ilikeitib-20','images/product-31.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('Why didn't I get this sooner?!','https://www.amazon.com/dp/B00T2O2O9G?tag=ilikeitib-20','images/product-31.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">Finally an organized closet! These bins make every</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">Why didn't I get this sooner?! Tupperware lids fin</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(31)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-32.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('Why didn't I get this sooner?!','https://www.amazon.com/dp/B00T2O2O9G?tag=ilikeitib-20','images/product-32.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('Canned goods have never looked','https://www.amazon.com/dp/B07YVPFJ7S?tag=ilikeitib-20','images/product-32.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">Why didn't I get this sooner?! Tupperware lids fin</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">Canned goods have never looked so good! No more di</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(32)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-33.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('Canned goods have never looked','https://www.amazon.com/dp/B07YVPFJ7S?tag=ilikeitib-20','images/product-33.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('No tools needed but so sturdy!','https://www.amazon.com/dp/B01MR2RWMG?tag=ilikeitib-20','images/product-33.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">Canned goods have never looked so good! No more di</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">No tools needed but so sturdy! My shower has never</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(33)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-34.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.4 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('No tools needed but so sturdy!','https://www.amazon.com/dp/B01MR2RWMG?tag=ilikeitib-20','images/product-34.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">No tools needed but so sturdy! My shower has never</h3>
-<div class="flex items-center gap-2 mt-2"></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="home-organization" onclick="openModal(34)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-35.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7 stars</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠 Home Organ</div>
-<button onclick="event.stopPropagation();saveToPinterest('These containers make my kitch','https://www.amazon.com/dp/B00T2O1V0U?tag=ilikeitib-20','images/product-35.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">🏠</div>
+<button onclick="event.stopPropagation();saveToPinterest('These containers make my kitch','https://www.amazon.com/dp/B00T2O1V0U?tag=ilikeitib-20','images/product-34.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">These containers make my kitchen look like a magaz</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="travel-outdoors" onclick="openModal(34)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-35.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✈️</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Carry-On Backpack is the ','https://www.amazon.com/dp/B0BSHXFLX7?tag=ilikeitib-20','images/product-35.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">This Carry-On Backpack is the Travel Upgrade You N</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="travel-outdoors" onclick="openModal(35)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-36.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✈️ Travel & O</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Carry-On Backpack is the ','https://www.amazon.com/dp/B0BSHXFLX7?tag=ilikeitib-20','images/product-36.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✈️</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Backpack is a Game Change','https://www.amazon.com/dp/B0BSHXFLX8?tag=ilikeitib-20','images/product-36.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">This Carry-On Backpack is the Travel Upgrade You N</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">This Backpack is a Game Changer for Digital Nomads</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="travel-outdoors" onclick="openModal(36)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-37.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.5</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✈️ Travel & O</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Backpack is a Game Change','https://www.amazon.com/dp/B0BSHXFLX8?tag=ilikeitib-20','images/product-37.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">This Backpack is a Game Changer for Digital Nomads</h3>
-<div class="flex items-center gap-2 mt-2"></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="travel-outdoors" onclick="openModal(37)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-38.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✈️ Travel & O</div>
-<button onclick="event.stopPropagation();saveToPinterest('This Camping Tent Sets Up in 6','https://www.amazon.com/dp/B08RYX1ZL7?tag=ilikeitib-20','images/product-38.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">✈️</div>
+<button onclick="event.stopPropagation();saveToPinterest('This Camping Tent Sets Up in 6','https://www.amazon.com/dp/B08RYX1ZL7?tag=ilikeitib-20','images/product-37.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">This Camping Tent Sets Up in 60 Seconds! ⛺✨</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+</div>
+</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="books-stationery" onclick="openModal(37)">
+<div class="relative h-48 overflow-hidden">
+<img src="images/product-38.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">📚</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Journal That Changed My Pl','https://www.amazon.com/dp/B0BSHXFLY3?tag=ilikeitib-20','images/product-38.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
+</div>
+<div class="p-4">
+<h3 class="font-semibold text-sm line-clamp-2">The Journal That Changed My Planning Game! 📓✨</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="books-stationery" onclick="openModal(38)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-39.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.7</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">📚 Books & St</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Journal That Changed My Pl','https://www.amazon.com/dp/B0BSHXFLY3?tag=ilikeitib-20','images/product-39.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6</div>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">📚</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Japanese Pens That Make Ev','https://www.amazon.com/dp/B0CC8BSVNN?tag=ilikeitib-20','images/product-39.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">The Journal That Changed My Planning Game! 📓✨</h3>
-<div class="flex items-center gap-2 mt-2"></div>
+<h3 class="font-semibold text-sm line-clamp-2">The Japanese Pens That Make Everything Look Aesthe</h3>
 </div>
 </div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="books-stationery" onclick="openModal(39)">
 <div class="relative h-48 overflow-hidden">
 <img src="images/product-40.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">📚 Books & St</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Japanese Pens That Make Ev','https://www.amazon.com/dp/B0CC8BSVNN?tag=ilikeitib-20','images/product-40.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
-</div>
-<div class="p-4">
-<h3 class="font-semibold text-sm line-clamp-2">The Japanese Pens That Make Everything Look Aesthe</h3>
-<div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-2 py-0.5 rounded">Prime</span></div>
-</div>
-</div><div class="bg-white rounded-2xl shadow-sm overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer group" data-category="books-stationery" onclick="openModal(40)">
-<div class="relative h-48 overflow-hidden">
-<img src="images/product-41.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy">
-<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full text-xs font-medium">⭐ 4.6</div>
-<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">📚 Books & St</div>
-<button onclick="event.stopPropagation();saveToPinterest('The Book Accessory That Book L','https://www.amazon.com/dp/B0BSHXFLY5?tag=ilikeitib-20','images/product-41.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700" title="Save to Pinterest">📌</button>
+<div class="absolute top-2 left-2 bg-rose-500 text-white text-xs px-2 py-1 rounded-full">📚</div>
+<button onclick="event.stopPropagation();saveToPinterest('The Book Accessory That Book L','https://www.amazon.com/dp/B0BSHXFLY5?tag=ilikeitib-20','images/product-40.jpg')" class="absolute bottom-2 right-2 bg-red-600 text-white p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-700">📌</button>
 </div>
 <div class="p-4">
 <h3 class="font-semibold text-sm line-clamp-2">The Book Accessory That Book Lovers Need! 📚💫</h3>
-<div class="flex items-center gap-2 mt-2"></div>
 </div>
 </div></div>
 <div id="no-results" class="hidden text-center py-16">
@@ -558,8 +499,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 </div>
 </div>
 </section>
-
-<!-- Newsletter -->
 <section class="bg-white dark:bg-stone-800 py-12 px-4">
 <div class="max-w-lg mx-auto text-center">
 <h3 class="text-xl font-bold text-stone-800 dark:text-white mb-2">Get New Favorites Weekly! 📬</h3>
@@ -571,39 +510,28 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 <p id="subscribe-msg" class="hidden mt-2 text-green-600">✅ Thanks! You're on the list!</p>
 </div>
 </section>
-
-<!-- About -->
 <section class="py-10 bg-stone-100 dark:bg-stone-800 px-4">
 <div class="max-w-lg mx-auto text-center">
 <h3 class="text-lg font-bold text-stone-800 dark:text-white mb-2">Hey, I'm Olivia! 👋</h3>
-<p class="text-stone-600 dark:text-stone-300 text-sm">I share products I genuinely use. When you buy through my links, I earn a small commission - but only recommend things I'd actually buy myself.</p>
+<p class="text-stone-600 dark:text-stone-300 text-sm">I share products I genuinely use.</p>
 </div>
 </section>
-
 <footer class="bg-stone-900 text-stone-400 py-6 text-center text-xs">
 <p>© 2026 ILikeItIBuyIt | <a href="https://www.pinterest.com/ilikeitibuyit/" target="_blank" class="text-rose-400 hover:underline">Pinterest</a> | #ad</p>
 </footer>
-
-<!-- Modal -->
 <div id="modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 p-4" onclick="closeModal()">
 <div class="bg-white dark:bg-stone-800 rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto" onclick="event.stopPropagation()">
 <div id="modal-content"></div>
 </div>
 </div>
-
-<!-- Toast -->
 <div id="toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg hidden">Saved!</div>
-
 <script>
-const products = [{"row": 2, "niche": "Home Organization", "title": "These Apothecary Jars Transformed My Bathroom! \ud83d\udec1\ud83d\udc95", "link": "https://www.amazon.com/dp/B08PB8ZTK1?tag=ilikeitib-20", "asin": "B08PB8ZTK1", "rating": "4.6 stars", "rank": "#1 in Bathroom Storage", "desc": "Tired of cluttered counters and messy cabinets? \ud83d\ude29 These apothecary jars are the kitchen glow-up you've been searching for! Clear glass with sleek steel lids keep your essentials visible while adding that boutique apothecary vibe to any room.", "image": "images/product-1.jpg", "price": 9.99, "original_price": 9.99, "is_prime": true}, {"row": 3, "niche": "Home Organization", "title": "POV: My Pantry Finally Looks Like a Magazine Cover! \ud83d\uddc2\ufe0f\u2728", "link": "https://www.amazon.com/dp/B0C4PRH1NT?tag=ilikeitib-20", "asin": "B0C4PRH1NT", "rating": "4.7 stars", "rank": "#3 in Pantry Storage", "desc": "Ever open your cabinet and everything comes tumbling out? \ud83d\ude05 These airtight food storage containers are here to save the day! Stackable design means more space for snacks and less stress for you.", "image": "images/product-2.jpg", "price": 49.99, "original_price": 49.99, "is_prime": false}, {"row": 4, "niche": "Home Organization", "title": "This Water Jug Holder Changed My Kitchen Forever! \ud83d\udca7\ud83c\udfe0", "link": "https://www.amazon.com/dp/B0CHYJ78XY?tag=ilikeitib-20", "asin": "B0CHYJ78XY", "rating": "4.5 stars", "rank": "#8 in Water Coolers", "desc": "Gallon water jugs taking over your fridge? These water jug holder racks are the game-changer your kitchen needs! Easy access, no more juggling, and your fridge will thank you.", "image": "images/product-3.jpg", "price": 34.99, "original_price": 34.99, "is_prime": true}, {"row": 5, "niche": "Tech & Smart Home", "title": "These Smart Plugs Made My Life SO Much Easier! \ud83d\udd0c\ud83d\udca1", "link": "https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20", "asin": "B0B62LPR5Z", "rating": "4.4 stars", "rank": "#1 in Smart Plugs", "desc": "Walking into a dark room just to flip a switch? \ud83d\ude44 These smart plugs let you control your whole home from your phone. Alexa, Google, or Apple Home - your voice is now the remote control.", "image": "images/product-4.jpg", "price": 24.99, "original_price": 24.99, "is_prime": true}, {"row": 6, "niche": "Tech & Smart Home", "title": "The Kasa Plugs Every Lazy Girl Needs! \ud83d\udecb\ufe0f\ud83d\ude34", "link": "https://www.amazon.com/dp/B091FXLMS8?tag=ilikeitib-20", "asin": "B091FXLMS8", "rating": "4.5 stars", "rank": "#2 in Smart Plugs", "desc": "Forgot to turn off the coffee maker? Again? \ud83d\ude05 WiFi smart plugs with timer function mean you never have to worry. Control everything from your phone - even when you're not home.", "image": "images/product-5.jpg", "price": 29.99, "original_price": 29.99, "is_prime": true}, {"row": 7, "niche": "Tech & Smart Home", "title": "Finally a Smart Plug That Actually Saves Money! \ud83d\udcb0\ud83c\udf0d", "link": "https://www.amazon.com/dp/B0CKM8CF7N?tag=ilikeitib-20", "asin": "B0CKM8CF7N", "rating": "4.3 stars", "rank": "#4 in Smart Plugs", "desc": "Wondering what your electricity bill is really costing you? This smart plug with energy monitoring shows you exactly how much power each device uses. Finally, a bill you won't dread opening! \u26a1", "image": "images/product-6.jpg", "price": 35.99, "original_price": 35.99, "is_prime": true}, {"row": 8, "niche": "Health & Fitness", "title": "This Collapsible Bottle is My New Adventure Must-Have! \ud83c\udfde\ufe0f\u2764\ufe0f", "link": "https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20", "asin": "B0DZT55GNG", "rating": "4.6 stars", "rank": "#1 in Water Bottles", "desc": "Water bottles taking over your whole bag? \ud83d\ude05 This collapsible water bottle compresses when empty, giving you more room for the stuff that matters. Perfect travel companion for gym, hiking, or road trips.", "image": "images/product-7.jpg", "price": 7.99, "original_price": 7.99, "is_prime": true}, {"row": 9, "niche": "Health & Fitness", "title": "The Water Bottle That Keeps Drinks Cold for DAYS! \u2744\ufe0f\ud83d\udcaa", "link": "https://www.amazon.com/dp/B0B8Y3RB3P?tag=ilikeitib-20", "asin": "B0B8Y3RB3P", "rating": "4.7 stars", "rank": "#5 in Sports Water Bottles", "desc": "Sipping lukewarm water halfway through your workout? \ud83d\ude44 This insulated stainless steel water bottle keeps drinks cold for 48 hours. One sip and you'll wonder how you ever survived without it.", "image": "images/product-8.jpg", "price": 32.99, "original_price": 32.99, "is_prime": true}, {"row": 10, "niche": "Health & Fitness", "title": "Travel Hack: This Collapsible Bottle is Game-Changing! \u2708\ufe0f\ud83e\uddf3", "link": "https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20", "asin": "B0DZT55GNG", "rating": "4.5 stars", "rank": "#2 in Reusable Bottles", "desc": "Trying to stay hydrated but bulky bottles keep getting in the way? This foldable silicone water bottle squishes down small enough for any bag. Hydration hero unlocked! \ud83c\udfc3", "image": "images/product-9.jpg", "price": 7.99, "original_price": 7.99, "is_prime": true}, {"row": 11, "niche": "Fashion & Accessories", "title": "My Stanley Cup Finally Has the Accessory It Deserves! \ud83d\udc5c\u2b50", "link": "https://www.amazon.com/dp/B0DMST2FHK?tag=ilikeitib-20", "asin": "B0DMST2FHK", "rating": "4.4 stars", "rank": "#1 in Insulated Bags", "desc": "Tumbler taking up your whole cupholder? \ud83d\ude05 This insulated tumbler holder with carrying strap keeps your drinks secure and your hands free. Finally, a solution that actually fits!", "image": "images/product-10.jpg", "price": null, "original_price": null, "is_prime": true}, {"row": 12, "niche": "Fashion & Accessories", "title": "These Smart Plugs Give the Coziest Night Light Vibes! \ud83c\udf19\u2728", "link": "https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20", "asin": "B0B62LPR5Z", "rating": "4.6 stars", "rank": "#15 in Smart Plugs", "desc": "Stumbling through the dark to find the bathroom light? \ud83d\ude34 This smart plug with built-in LED night light guides your way without blasting you with brightness. Sleep-friendly and life-changing.", "image": "images/product-11.jpg", "price": 24.99, "original_price": 24.99, "is_prime": true}, {"row": 13, "niche": "Kitchen & Cooking", "title": "These Spice Jars Made My Kitchen Look Pinterest-Perfect! \ud83e\uddc2\ud83d\udcf8", "link": "https://www.amazon.com/dp/B0B2LLV1FL?tag=ilikeitib-20", "asin": "B0B2LLV1FL", "rating": "4.7 stars", "rank": "#1 in Spice Jars", "desc": "Spice cabinet looking like a chaotic mess? \ud83d\ude05 These glass spice jars with bamboo lids turn your pantry into a cohesive dream. No more searching for paprika at 7pm dinner!", "image": "images/product-12.jpg", "price": 35.99, "original_price": 35.99, "is_prime": true}, {"row": 14, "niche": "Kitchen & Cooking", "title": "Meal Prep Game Changed Forever! \ud83e\udd57\ud83d\udc96", "link": "https://www.amazon.com/dp/B0DKFK9LTK?tag=ilikeitib-20", "asin": "B0DKFK9LTK", "rating": "4.6 stars", "rank": "#3 in Food Storage Sets", "desc": "Eating the same boring lunch because meal prep feels like a chore? \ud83e\udd57 These glass meal prep containers make batch cooking actually enjoyable. Leak-proof, microwave-safe, and oh-so-pretty.", "image": "images/product-13.jpg", "price": 39.99, "original_price": 39.99, "is_prime": true}, {"row": 15, "niche": "Kitchen & Cooking", "title": "The Glass Jars That Organizes Everything Beautifully! \ud83e\uded9\ud83d\udc95", "link": "https://www.amazon.com/dp/B07QXC72NK?tag=ilikeitib-20", "asin": "B07QXC72NK", "rating": "4.5 stars", "rank": "#4 in Glass Jars", "desc": "Pantry looking like a food explosion happened? \ud83d\ude44 These airtight glass storage jars with bamboo lids are the organized aesthetic your kitchen deserves. Everything stays fresh and looks beautiful!", "image": "images/product-14.jpg", "price": 31.99, "original_price": 31.99, "is_prime": true}, {"row": 16, "niche": "Pet Supplies", "title": "Every Dog Mom Needs This Water Bottle! \ud83d\udc15\u2764\ufe0f", "link": "https://www.amazon.com/dp/B0C5QY5YH1?tag=ilikeitib-20", "asin": "B0C5QY5YH1", "rating": "4.5 stars", "rank": "#1 in Dog Water Bottles", "desc": "Dogs getting the zoomies during walks because they can't find water? \ud83d\ude05 This portable dog water bottle has one-hand operation - squeeze to drink, release to store. Walks just got way easier!", "image": "images/product-15.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 17, "niche": "Pet Supplies", "title": "My Cat's Dream Tower Finally Arrived! \ud83d\udc31\ud83c\udff0", "link": "https://www.amazon.com/dp/B0C3P7XGKL?tag=ilikeitib-20", "asin": "B0C3P7XGKL", "rating": "4.7 stars", "rank": "#2 in Cat Trees", "desc": "Cat scratching your furniture because they have nothing better to do? \ud83d\ude44 This multi-level cat tree gives them their own jungle gym. Scratching posts, cozy hammock, and entertainment for hours!", "image": "images/product-16.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 18, "niche": "Pet Supplies", "title": "This Pet Feeder is a Total Lifesaver for Busy Moms! \ud83d\udc76\ud83d\udc3e", "link": "https://www.amazon.com/dp/B0DF7H6SGZ?tag=ilikeitib-20", "asin": "B0DF7H6SGZ", "rating": "4.4 stars", "rank": "#3 in Automatic Feeders", "desc": "Worrying about feeding times when you work late? \ud83d\ude05 This automatic pet feeder schedules meals from your phone. Peace of mind that your furry friend is always fed, even when you can't be there.", "image": "images/product-17.jpg", "price": 39.99, "original_price": 39.99, "is_prime": true}, {"row": 19, "niche": "Beauty & Self Care", "title": "This Face Cleanser Gave Me My Glow Back! \u2728\ud83d\udc86\u200d\u2640\ufe0f", "link": "https://www.amazon.com/dp/B0CZ8H7FGR?tag=ilikeitib-20", "asin": "B0CZ8H7FGR", "rating": "4.3 stars", "rank": "#1 in Facial Cleansing Devices", "desc": "Washing your face but still feeling like something's stuck in your pores? \ud83d\ude05 This electric facial cleansing brush gets deep down where your hands can't. Glowing skin just got way easier! \u2728", "image": "images/product-18.jpg", "price": 14.99, "original_price": 14.99, "is_prime": true}, {"row": 20, "niche": "Beauty & Self Care", "title": "The Vanity Mirror That Makes Getting Ready Feel Magical! \ud83d\udc84\ud83e\ude9e", "link": "https://www.amazon.com/dp/B0GGJ745BK?tag=ilikeitib-20", "asin": "B0GGJ745BK", "rating": "4.6 stars", "rank": "#2 in Vanity Mirrors", "desc": "Applying makeup in bad lighting and wondering why it looks so different everywhere? \ud83d\ude44 This LED vanity mirror with adjustable lighting means you always see your true reflection. Game changer for makeup lovers! \ud83d\udc84", "image": "images/product-19.jpg", "price": 79.99, "original_price": 79.99, "is_prime": false}, {"row": 21, "niche": "Beauty & Self Care", "title": "Silk Pillowcases: The Beauty Secret Everyone's Talking About! \ud83d\udca4\u2728", "link": "https://www.amazon.com/dp/B09BFQG17F?tag=ilikeitib-20", "asin": "B09BFQG17F", "rating": "4.7 stars", "rank": "#1 in Silk Pillowcases", "desc": "Wake up with creased hair and pillow lines every morning? \ud83d\ude34 These mulberry silk pillowcases are the self-care upgrade your beauty sleep needs. Gentler on skin and hair - you'll never go back to cotton!", "image": "images/product-20.jpg", "price": 18.99, "original_price": 18.99, "is_prime": true}, {"row": 22, "niche": "Office & Productivity", "title": "This Chair Fixed My Back Pain After Years of Suffering! \ud83d\udcba\ud83d\ude4c", "link": "https://www.amazon.com/dp/B0CP22DQQS?tag=ilikeitib-20", "asin": "B0CP22DQQS", "rating": "4.5 stars", "rank": "#1 in Office Chairs", "desc": "Back pain creeping in during your 9-to-5? \ud83d\ude05 This ergonomic office chair with lumbar support keeps you comfortable through every meeting. Mesh back means you stay cool while you crush your work.", "image": "images/product-21.jpg", "price": 139.99, "original_price": 139.99, "is_prime": false}, {"row": 23, "niche": "Office & Productivity", "title": "The Desk Organizer That Finally Made My Space Feel Put Together! \ud83d\udda5\ufe0f\ud83d\udc95", "link": "https://www.amazon.com/dp/B0DP2H653T?tag=ilikeitib-20", "asin": "B0DP2H653T", "rating": "4.4 stars", "rank": "#2 in Cable Management", "desc": "Cables turning your desk into a tangled nightmare? \ud83d\ude44 This cable management box hides the mess completely. Clean desk energy unlocked - your workspace just got way more productive! \ud83d\udda5\ufe0f", "image": "images/product-22.jpg", "price": 22.99, "original_price": 22.99, "is_prime": true}, {"row": 24, "niche": "Office & Productivity", "title": "Standing Desk Converter: The Work From Home Upgrade I Needed! \ud83d\ude80\ud83d\udcbc", "link": "https://www.amazon.com/dp/B075JYG2TB?tag=ilikeitib-20", "asin": "B075JYG2TB", "rating": "4.3 stars", "rank": "#1 in Standing Desks", "desc": "Feeling sluggish after sitting all day? \ud83d\ude05 This standing desk converter lets you switch between sitting and standing in seconds. Better posture, more energy, and your back will thank you! \ud83d\ude80", "image": "images/product-23.jpg", "price": 149.99, "original_price": 149.99, "is_prime": false}, {"row": 25, "niche": "Garden & Outdoor", "title": "These Solar Lights Turned My Yard Into a Fairy Tale! \ud83c\udf1f\ud83c\udfe1", "link": "https://www.amazon.com/dp/B0D3K9FC7Z?tag=ilikeitib-20", "asin": "B0D3K9FC7Z", "rating": "4.4 stars", "rank": "#1 in Solar Garden Lights", "desc": "Wanting a cozy backyard vibe but not sure how to achieve it? \ud83c\udf19 These solar garden lights turn on automatically at dusk, creating that magical evening ambiance without lifting a finger. Your yard just got prettier!", "image": "images/product-24.jpg", "price": 29.99, "original_price": 29.99, "is_prime": true}, {"row": 26, "niche": "Garden & Outdoor", "title": "Finally a Garden Hose That Doesn't Fight Back! \ud83c\udf31\ud83d\ude02", "link": "https://www.amazon.com/dp/B003TFE7ZM?tag=ilikeitib-20", "asin": "B003TFE7ZM", "rating": "4.5 stars", "rank": "#4 in Garden Hoses", "desc": "Fighting with a heavy, kinked garden hose every time you water? \ud83d\ude05 This expandable garden hose with spray nozzle is lightweight, compact, and makes watering actually enjoyable. Finally, gardening doesn't have to be a workout! \ud83c\udf31", "image": "images/product-25.jpg", "price": 39.97, "original_price": 39.97, "is_prime": false}, {"row": 27, "niche": "Garden & Outdoor", "title": "String Lights That Make Every Evening Feel Special! \ud83c\udf84\ud83d\udcab", "link": "https://www.amazon.com/dp/B0DX1WPB9J?tag=ilikeitib-20", "asin": "B0DX1WPB9J", "rating": "4.6 stars", "rank": "#2 in String Lights", "desc": "Want to create that Instagram-worthy outdoor space? \ud83c\udf84 These weatherproof string lights transform any patio or deck into a cozy hangout spot. Perfect for summer nights with friends!", "image": "images/product-26.jpg", "price": 759.99, "original_price": 759.99, "is_prime": false}, {"row": 28, "niche": "Baby & Kids", "title": "This Diaper Backpack is Chic AND Functional! \ud83d\udc76\ud83d\udc5c", "link": "https://www.amazon.com/dp/B0C86S6GLQ?tag=ilikeitib-20", "asin": "B0C86S6GLQ", "rating": "4.6 stars", "rank": "#1 in Diaper Bags", "desc": "Diapers taking over every bag you own? \ud83d\ude05 This diaper backpack has dedicated compartments for everything - bottles, wipes, changing pad, and even a USB port for your phone. Parenting just got more organized! \ud83d\udc76", "image": "images/product-27.jpg", "price": 38.99, "original_price": 38.99, "is_prime": false}, {"row": 29, "niche": "Baby & Kids", "title": "The Kids Tablet That Keeps Little Ones Entertained for Hours! \ud83c\udfae\ud83d\udc67", "link": "https://www.amazon.com/dp/B07PLG93NS?tag=ilikeitib-20", "asin": "B07PLG93NS", "rating": "4.3 stars", "rank": "#2 in Kids Tablets", "desc": "Screen time battles getting real? \ud83d\ude44 This kids learning tablet comes with parental controls so you decide what they watch. Educational games that actually teach while keeping them entertained!", "image": "images/product-28.jpg", "price": 119.9, "original_price": 119.9, "is_prime": false}, {"row": 30, "niche": "Baby & Kids", "title": "This Play Mat is Soft, Cute, AND Safe! \ud83e\uddf8\ud83d\udc96", "link": "https://www.amazon.com/dp/B07GY1PH4K?tag=ilikeitib-20", "asin": "B07GY1PH4K", "rating": "4.7 stars", "rank": "#1 in Baby Play Mats", "desc": "Little ones crawling on hard floors? \ud83d\ude05 This foam play mat with interlocking tiles creates a soft, safe play space. Easy to clean, easy to store, and easy on their little knees! \ud83e\uddf8", "image": "images/product-29.jpg", "price": 29.99, "original_price": 29.99, "is_prime": true}, {"row": 31, "niche": "Home Organization", "title": "Drawer organizers don't have to be boring! These are giving closet goals and I'm here for it! \ud83d\uddc4\ufe0f\ud83d\udc95", "link": "https://www.amazon.com/dp/B0C8PQXQK4?tag=ilikeitib-20", "asin": "B0C8PQXQK4", "rating": "4.7 stars", "rank": "#1 in Drawer Organizers", "desc": "Checking a bag just for clothes you could fit in a carry-on? \ud83d\ude05 This carry-on backpack works as both carry-on AND personal item. More efficient packing = more money saved! \u2708\ufe0f", "image": "images/product-30.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 32, "niche": "Home Organization", "title": "Finally an organized closet! These bins make everything so easy to find. Storage goals achieved! \ud83d\uddc4\ufe0f\u2728", "link": "https://www.amazon.com/dp/B01MR2W0GC?tag=ilikeitib-20", "asin": "B01MR2W0GC", "rating": "4.6 stars", "rank": "#2 in Storage Bins", "desc": "Digital nomad life calling but your bag is chaos? \ud83d\ude44 This 40L expandable travel backpack has a USB charging port built right in. Work from anywhere without dead devices! \ud83c\udf0d", "image": "images/product-31.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 33, "niche": "Home Organization", "title": "Why didn't I get this sooner?! Tupperware lids finally have a home and it's brilliant! \ud83c\udf71\ud83d\ude4c", "link": "https://www.amazon.com/dp/B00T2O2O9G?tag=ilikeitib-20", "asin": "B00T2O2O9G", "rating": "4.5 stars", "rank": "#1 in Kitchen Organizers", "desc": "Camping setups taking longer than the hike itself? \ud83d\ude05 This instant pop-up tent sets up in 60 seconds. Waterproof, durable, and suddenly you're ready for any adventure! \u26fa", "image": "images/product-32.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 34, "niche": "Home Organization", "title": "Canned goods have never looked so good! No more digging in the back. Rotation made easy! \ud83e\udd6b\ud83d\udc96", "link": "https://www.amazon.com/dp/B07YVPFJ7S?tag=ilikeitib-20", "asin": "B07YVPFJ7S", "rating": "4.6 stars", "rank": "#1 in Can Dispensers", "desc": "Where do guests put their cards at the reception? \ud83d\ude05 This elegant wedding card box keeps everything secure and looks beautiful on your guest book table. The detail that ties the whole room together! \ud83d\udc92", "image": "images/product-33.jpg", "price": "", "original_price": "", "is_prime": false}, {"row": 35, "niche": "Home Organization", "title": "No tools needed but so sturdy! My shower has never been more organized. Love this hack! \ud83d\udec1\u2728", "link": "https://www.amazon.com/dp/B01MR2RWMG?tag=ilikeitib-20", "asin": "B01MR2RWMG", "rating": "4.4 stars", "rank": "#2 in Shower Caddies", "desc": "Renting glassware for your wedding costs a fortune? \ud83d\ude44 These disposable party cups look just like glass but won't break the budget. Elegant and practical - your wallet will thank you! \ud83e\udd42", "image": "images/product-34.jpg", "price": "", "original_price": "", "is_prime": false}, {"row": 36, "niche": "Home Organization", "title": "These containers make my kitchen look like a magazine! Every time I open the pantry I smile. Worth every penny! \ud83c\udf6a\ud83d\udc95", "link": "https://www.amazon.com/dp/B00T2O1V0U?tag=ilikeitib-20", "asin": "B00T2O1V0U", "rating": "4.7 stars", "rank": "#1 in Food Storage", "desc": "Want to ask your bridesmaids but keep it memorable? \ud83d\udc57 This bridesmaid proposal gift box is the sweetest way to pop the question. Champagne, robes, and all the feels!", "image": "images/product-35.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 37, "niche": "Travel & Outdoors", "title": "This Carry-On Backpack is the Travel Upgrade You Need \u2708\ufe0f\ud83d\udcab", "link": "https://www.amazon.com/dp/B0BSHXFLX7?tag=ilikeitib-20", "asin": "B0BSHXFLX7", "rating": 4.6, "rank": "#1 in Travel Backpacks", "desc": "Journals with paper that bleeds through your pen? \ud83d\ude05 This premium dotted notebook has paper quality that serious journalers swear by. Bullet journal dreams = finally achievable! \ud83d\udcd3", "image": "images/product-36.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 38, "niche": "Travel & Outdoors", "title": "This Backpack is a Game Changer for Digital Nomads! \ud83d\udcbb\u2708\ufe0f", "link": "https://www.amazon.com/dp/B0BSHXFLX8?tag=ilikeitib-20", "asin": "B0BSHXFLX8", "rating": 4.5, "rank": "#3 in Travel Backpacks", "desc": "Pens that skip, blob, or just frustrate you? \ud83d\ude44 These Japanese gel pens write so smoothly you'll want to write everything down. Journaling game changed! \u270d\ufe0f", "image": "images/product-37.jpg", "price": null, "original_price": null, "is_prime": null}, {"row": 39, "niche": "Travel & Outdoors", "title": "This Camping Tent Sets Up in 60 Seconds! \u26fa\u2728", "link": "https://www.amazon.com/dp/B08RYX1ZL7?tag=ilikeitib-20", "asin": "B08RYX1ZL7", "rating": 4.7, "rank": "#1 in Instant Tents", "desc": "Dog-earing pages and losing your spot? \ud83d\ude05 These gold book darts mark pages elegantly without damaging your books. For book lovers who take their reading seriously! \ud83d\udcda", "image": "images/product-38.jpg", "price": 99.99, "original_price": 99.99, "is_prime": false}, {"row": 40, "niche": "Books & Stationery", "title": "The Journal That Changed My Planning Game! \ud83d\udcd3\u2728", "link": "https://www.amazon.com/dp/B0BSHXFLY3?tag=ilikeitib-20", "asin": "B0BSHXFLY3", "rating": 4.7, "rank": "#1 in Hardcover Notebooks", "desc": "Forgetting about cans in the back of the pantry? \ud83d\ude44 This can rack dispenser gives you first-in-first-out rotation automatically. Less food waste, more organization! \ud83e\udd6b", "image": "images/product-39.jpg", "price": "", "original_price": "", "is_prime": false}, {"row": 41, "niche": "Books & Stationery", "title": "The Japanese Pens That Make Everything Look Aesthetic \u270d\ufe0f\ud83d\udda4", "link": "https://www.amazon.com/dp/B0CC8BSVNN?tag=ilikeitib-20", "asin": "B0CC8BSVNN", "rating": 4.6, "rank": "#1 in Gel Pens", "desc": "Shower caddies that fall down within a week? \ud83d\ude05 This adhesive shower caddy requires no drilling but holds strong. Chrome finish that looks expensive without the hassle! \ud83d\udec1", "image": "images/product-40.jpg", "price": 9.99, "original_price": 9.99, "is_prime": true}, {"row": 42, "niche": "Books & Stationery", "title": "The Book Accessory That Book Lovers Need! \ud83d\udcda\ud83d\udcab", "link": "https://www.amazon.com/dp/B0BSHXFLY5?tag=ilikeitib-20", "asin": "B0BSHXFLY5", "rating": 4.6, "rank": "#2 in Bookmarks", "desc": "Pantry looking disorganized despite your best efforts? \ud83d\ude44 These airtight POP containers keep everything fresh and looking uniform. The kitchen upgrade you've been needing! \ud83e\udd61", "image": "images/product-41.jpg", "price": null, "original_price": null, "is_prime": null}];
-
+const products = [{"niche": "Home Organization", "title": "These Apothecary Jars Transformed My Bathroom! \ud83d\udec1\ud83d\udc95", "link": "https://www.amazon.com/dp/B08PB8ZTK1?tag=ilikeitib-20", "asin": "B08PB8ZTK1", "rating": "4.6 stars", "rank": "#1 in Bathroom Storage", "desc": "Tired of cluttered counters and messy cabinets? \ud83d\ude29 These apothecary jars are the kitchen glow-up you've been searching for! Clear glass with sleek steel lids keep your essentials visible while adding that boutique apothecary vibe to any room."}, {"niche": "Home Organization", "title": "POV: My Pantry Finally Looks Like a Magazine Cover! \ud83d\uddc2\ufe0f\u2728", "link": "https://www.amazon.com/dp/B0C4PRH1NT?tag=ilikeitib-20", "asin": "B0C4PRH1NT", "rating": "4.7 stars", "rank": "#3 in Pantry Storage", "desc": "Ever open your cabinet and everything comes tumbling out? \ud83d\ude05 These airtight food storage containers are here to save the day! Stackable design means more space for snacks and less stress for you."}, {"niche": "Home Organization", "title": "This Water Jug Holder Changed My Kitchen Forever! \ud83d\udca7\ud83c\udfe0", "link": "https://www.amazon.com/dp/B0CHYJ78XY?tag=ilikeitib-20", "asin": "B0CHYJ78XY", "rating": "4.5 stars", "rank": "#8 in Water Coolers", "desc": "Gallon water jugs taking over your fridge? These water jug holder racks are the game-changer your kitchen needs! Easy access, no more juggling, and your fridge will thank you."}, {"niche": "Tech & Smart Home", "title": "These Smart Plugs Made My Life SO Much Easier! \ud83d\udd0c\ud83d\udca1", "link": "https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20", "asin": "B0B62LPR5Z", "rating": "4.4 stars", "rank": "#1 in Smart Plugs", "desc": "Walking into a dark room just to flip a switch? \ud83d\ude44 These smart plugs let you control your whole home from your phone. Alexa, Google, or Apple Home - your voice is now the remote control."}, {"niche": "Tech & Smart Home", "title": "The Kasa Plugs Every Lazy Girl Needs! \ud83d\udecb\ufe0f\ud83d\ude34", "link": "https://www.amazon.com/dp/B091FXLMS8?tag=ilikeitib-20", "asin": "B091FXLMS8", "rating": "4.5 stars", "rank": "#2 in Smart Plugs", "desc": "Forgot to turn off the coffee maker? Again? \ud83d\ude05 WiFi smart plugs with timer function mean you never have to worry. Control everything from your phone - even when you're not home."}, {"niche": "Tech & Smart Home", "title": "Finally a Smart Plug That Actually Saves Money! \ud83d\udcb0\ud83c\udf0d", "link": "https://www.amazon.com/dp/B0CKM8CF7N?tag=ilikeitib-20", "asin": "B0CKM8CF7N", "rating": "4.3 stars", "rank": "#4 in Smart Plugs", "desc": "Wondering what your electricity bill is really costing you? This smart plug with energy monitoring shows you exactly how much power each device uses. Finally, a bill you won't dread opening! \u26a1"}, {"niche": "Health & Fitness", "title": "This Collapsible Bottle is My New Adventure Must-Have! \ud83c\udfde\ufe0f\u2764\ufe0f", "link": "https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20", "asin": "B0DZT55GNG", "rating": "4.6 stars", "rank": "#1 in Water Bottles", "desc": "Water bottles taking over your whole bag? \ud83d\ude05 This collapsible water bottle compresses when empty, giving you more room for the stuff that matters. Perfect travel companion for gym, hiking, or road trips."}, {"niche": "Health & Fitness", "title": "The Water Bottle That Keeps Drinks Cold for DAYS! \u2744\ufe0f\ud83d\udcaa", "link": "https://www.amazon.com/dp/B0B8Y3RB3P?tag=ilikeitib-20", "asin": "B0B8Y3RB3P", "rating": "4.7 stars", "rank": "#5 in Sports Water Bottles", "desc": "Sipping lukewarm water halfway through your workout? \ud83d\ude44 This insulated stainless steel water bottle keeps drinks cold for 48 hours. One sip and you'll wonder how you ever survived without it."}, {"niche": "Health & Fitness", "title": "Travel Hack: This Collapsible Bottle is Game-Changing! \u2708\ufe0f\ud83e\uddf3", "link": "https://www.amazon.com/dp/B0DZT55GNG?tag=ilikeitib-20", "asin": "B0DZT55GNG", "rating": "4.5 stars", "rank": "#2 in Reusable Bottles", "desc": "Trying to stay hydrated but bulky bottles keep getting in the way? This foldable silicone water bottle squishes down small enough for any bag. Hydration hero unlocked! \ud83c\udfc3"}, {"niche": "Fashion & Accessories", "title": "My Stanley Cup Finally Has the Accessory It Deserves! \ud83d\udc5c\u2b50", "link": "https://www.amazon.com/dp/B0DMST2FHK?tag=ilikeitib-20", "asin": "B0DMST2FHK", "rating": "4.4 stars", "rank": "#1 in Insulated Bags", "desc": "Tumbler taking up your whole cupholder? \ud83d\ude05 This insulated tumbler holder with carrying strap keeps your drinks secure and your hands free. Finally, a solution that actually fits!"}, {"niche": "Fashion & Accessories", "title": "These Smart Plugs Give the Coziest Night Light Vibes! \ud83c\udf19\u2728", "link": "https://www.amazon.com/dp/B0B62LPR5Z?tag=ilikeitib-20", "asin": "B0B62LPR5Z", "rating": "4.6 stars", "rank": "#15 in Smart Plugs", "desc": "Stumbling through the dark to find the bathroom light? \ud83d\ude34 This smart plug with built-in LED night light guides your way without blasting you with brightness. Sleep-friendly and life-changing."}, {"niche": "Kitchen & Cooking", "title": "These Spice Jars Made My Kitchen Look Pinterest-Perfect! \ud83e\uddc2\ud83d\udcf8", "link": "https://www.amazon.com/dp/B0B2LLV1FL?tag=ilikeitib-20", "asin": "B0B2LLV1FL", "rating": "4.7 stars", "rank": "#1 in Spice Jars", "desc": "Spice cabinet looking like a chaotic mess? \ud83d\ude05 These glass spice jars with bamboo lids turn your pantry into a cohesive dream. No more searching for paprika at 7pm dinner!"}, {"niche": "Kitchen & Cooking", "title": "Meal Prep Game Changed Forever! \ud83e\udd57\ud83d\udc96", "link": "https://www.amazon.com/dp/B0DKFK9LTK?tag=ilikeitib-20", "asin": "B0DKFK9LTK", "rating": "4.6 stars", "rank": "#3 in Food Storage Sets", "desc": "Eating the same boring lunch because meal prep feels like a chore? \ud83e\udd57 These glass meal prep containers make batch cooking actually enjoyable. Leak-proof, microwave-safe, and oh-so-pretty."}, {"niche": "Kitchen & Cooking", "title": "The Glass Jars That Organizes Everything Beautifully! \ud83e\uded9\ud83d\udc95", "link": "https://www.amazon.com/dp/B07QXC72NK?tag=ilikeitib-20", "asin": "B07QXC72NK", "rating": "4.5 stars", "rank": "#4 in Glass Jars", "desc": "Pantry looking like a food explosion happened? \ud83d\ude44 These airtight glass storage jars with bamboo lids are the organized aesthetic your kitchen deserves. Everything stays fresh and looks beautiful!"}, {"niche": "Pet Supplies", "title": "Every Dog Mom Needs This Water Bottle! \ud83d\udc15\u2764\ufe0f", "link": "https://www.amazon.com/dp/B0C5QY5YH1?tag=ilikeitib-20", "asin": "B0C5QY5YH1", "rating": "4.5 stars", "rank": "#1 in Dog Water Bottles", "desc": "Dogs getting the zoomies during walks because they can't find water? \ud83d\ude05 This portable dog water bottle has one-hand operation - squeeze to drink, release to store. Walks just got way easier!"}, {"niche": "Pet Supplies", "title": "This Pet Feeder is a Total Lifesaver for Busy Moms! \ud83d\udc76\ud83d\udc3e", "link": "https://www.amazon.com/dp/B0DF7H6SGZ?tag=ilikeitib-20", "asin": "B0DF7H6SGZ", "rating": "4.4 stars", "rank": "#3 in Automatic Feeders", "desc": "Worrying about feeding times when you work late? \ud83d\ude05 This automatic pet feeder schedules meals from your phone. Peace of mind that your furry friend is always fed, even when you can't be there."}, {"niche": "Beauty & Self Care", "title": "This Face Cleanser Gave Me My Glow Back! \u2728\ud83d\udc86\u200d\u2640\ufe0f", "link": "https://www.amazon.com/dp/B0CZ8H7FGR?tag=ilikeitib-20", "asin": "B0CZ8H7FGR", "rating": "4.3 stars", "rank": "#1 in Facial Cleansing Devices", "desc": "Washing your face but still feeling like something's stuck in your pores? \ud83d\ude05 This electric facial cleansing brush gets deep down where your hands can't. Glowing skin just got way easier! \u2728"}, {"niche": "Beauty & Self Care", "title": "The Vanity Mirror That Makes Getting Ready Feel Magical! \ud83d\udc84\ud83e\ude9e", "link": "https://www.amazon.com/dp/B0GGJ745BK?tag=ilikeitib-20", "asin": "B0GGJ745BK", "rating": "4.6 stars", "rank": "#2 in Vanity Mirrors", "desc": "Applying makeup in bad lighting and wondering why it looks so different everywhere? \ud83d\ude44 This LED vanity mirror with adjustable lighting means you always see your true reflection. Game changer for makeup lovers! \ud83d\udc84"}, {"niche": "Beauty & Self Care", "title": "Silk Pillowcases: The Beauty Secret Everyone's Talking About! \ud83d\udca4\u2728", "link": "https://www.amazon.com/dp/B09BFQG17F?tag=ilikeitib-20", "asin": "B09BFQG17F", "rating": "4.7 stars", "rank": "#1 in Silk Pillowcases", "desc": "Wake up with creased hair and pillow lines every morning? \ud83d\ude34 These mulberry silk pillowcases are the self-care upgrade your beauty sleep needs. Gentler on skin and hair - you'll never go back to cotton!"}, {"niche": "Office & Productivity", "title": "This Chair Fixed My Back Pain After Years of Suffering! \ud83d\udcba\ud83d\ude4c", "link": "https://www.amazon.com/dp/B0CP22DQQS?tag=ilikeitib-20", "asin": "B0CP22DQQS", "rating": "4.5 stars", "rank": "#1 in Office Chairs", "desc": "Back pain creeping in during your 9-to-5? \ud83d\ude05 This ergonomic office chair with lumbar support keeps you comfortable through every meeting. Mesh back means you stay cool while you crush your work."}, {"niche": "Office & Productivity", "title": "The Desk Organizer That Finally Made My Space Feel Put Together! \ud83d\udda5\ufe0f\ud83d\udc95", "link": "https://www.amazon.com/dp/B0DP2H653T?tag=ilikeitib-20", "asin": "B0DP2H653T", "rating": "4.4 stars", "rank": "#2 in Cable Management", "desc": "Cables turning your desk into a tangled nightmare? \ud83d\ude44 This cable management box hides the mess completely. Clean desk energy unlocked - your workspace just got way more productive! \ud83d\udda5\ufe0f"}, {"niche": "Office & Productivity", "title": "Standing Desk Converter: The Work From Home Upgrade I Needed! \ud83d\ude80\ud83d\udcbc", "link": "https://www.amazon.com/dp/B075JYG2TB?tag=ilikeitib-20", "asin": "B075JYG2TB", "rating": "4.3 stars", "rank": "#1 in Standing Desks", "desc": "Feeling sluggish after sitting all day? \ud83d\ude05 This standing desk converter lets you switch between sitting and standing in seconds. Better posture, more energy, and your back will thank you! \ud83d\ude80"}, {"niche": "Garden & Outdoor", "title": "These Solar Lights Turned My Yard Into a Fairy Tale! \ud83c\udf1f\ud83c\udfe1", "link": "https://www.amazon.com/dp/B0D3K9FC7Z?tag=ilikeitib-20", "asin": "B0D3K9FC7Z", "rating": "4.4 stars", "rank": "#1 in Solar Garden Lights", "desc": "Wanting a cozy backyard vibe but not sure how to achieve it? \ud83c\udf19 These solar garden lights turn on automatically at dusk, creating that magical evening ambiance without lifting a finger. Your yard just got prettier!"}, {"niche": "Garden & Outdoor", "title": "Finally a Garden Hose That Doesn't Fight Back! \ud83c\udf31\ud83d\ude02", "link": "https://www.amazon.com/dp/B003TFE7ZM?tag=ilikeitib-20", "asin": "B003TFE7ZM", "rating": "4.5 stars", "rank": "#4 in Garden Hoses", "desc": "Fighting with a heavy, kinked garden hose every time you water? \ud83d\ude05 This expandable garden hose with spray nozzle is lightweight, compact, and makes watering actually enjoyable. Finally, gardening doesn't have to be a workout! \ud83c\udf31"}, {"niche": "Garden & Outdoor", "title": "String Lights That Make Every Evening Feel Special! \ud83c\udf84\ud83d\udcab", "link": "https://www.amazon.com/dp/B0DX1WPB9J?tag=ilikeitib-20", "asin": "B0DX1WPB9J", "rating": "4.6 stars", "rank": "#2 in String Lights", "desc": "Want to create that Instagram-worthy outdoor space? \ud83c\udf84 These weatherproof string lights transform any patio or deck into a cozy hangout spot. Perfect for summer nights with friends!"}, {"niche": "Baby & Kids", "title": "This Diaper Backpack is Chic AND Functional! \ud83d\udc76\ud83d\udc5c", "link": "https://www.amazon.com/dp/B0C86S6GLQ?tag=ilikeitib-20", "asin": "B0C86S6GLQ", "rating": "4.6 stars", "rank": "#1 in Diaper Bags", "desc": "Diapers taking over every bag you own? \ud83d\ude05 This diaper backpack has dedicated compartments for everything - bottles, wipes, changing pad, and even a USB port for your phone. Parenting just got more organized! \ud83d\udc76"}, {"niche": "Baby & Kids", "title": "The Kids Tablet That Keeps Little Ones Entertained for Hours! \ud83c\udfae\ud83d\udc67", "link": "https://www.amazon.com/dp/B07PLG93NS?tag=ilikeitib-20", "asin": "B07PLG93NS", "rating": "4.3 stars", "rank": "#2 in Kids Tablets", "desc": "Screen time battles getting real? \ud83d\ude44 This kids learning tablet comes with parental controls so you decide what they watch. Educational games that actually teach while keeping them entertained!"}, {"niche": "Baby & Kids", "title": "This Play Mat is Soft, Cute, AND Safe! \ud83e\uddf8\ud83d\udc96", "link": "https://www.amazon.com/dp/B07GY1PH4K?tag=ilikeitib-20", "asin": "B07GY1PH4K", "rating": "4.7 stars", "rank": "#1 in Baby Play Mats", "desc": "Little ones crawling on hard floors? \ud83d\ude05 This foam play mat with interlocking tiles creates a soft, safe play space. Easy to clean, easy to store, and easy on their little knees! \ud83e\uddf8"}, {"niche": "Home Organization", "title": "Drawer organizers don't have to be boring! These are giving closet goals and I'm here for it! \ud83d\uddc4\ufe0f\ud83d\udc95", "link": "https://www.amazon.com/dp/B0C8PQXQK4?tag=ilikeitib-20", "asin": "B0C8PQXQK4", "rating": "4.7 stars", "rank": "#1 in Drawer Organizers", "desc": "Checking a bag just for clothes you could fit in a carry-on? \ud83d\ude05 This carry-on backpack works as both carry-on AND personal item. More efficient packing = more money saved! \u2708\ufe0f"}, {"niche": "Home Organization", "title": "Finally an organized closet! These bins make everything so easy to find. Storage goals achieved! \ud83d\uddc4\ufe0f\u2728", "link": "https://www.amazon.com/dp/B01MR2W0GC?tag=ilikeitib-20", "asin": "B01MR2W0GC", "rating": "4.6 stars", "rank": "#2 in Storage Bins", "desc": "Digital nomad life calling but your bag is chaos? \ud83d\ude44 This 40L expandable travel backpack has a USB charging port built right in. Work from anywhere without dead devices! \ud83c\udf0d"}, {"niche": "Home Organization", "title": "Why didn't I get this sooner?! Tupperware lids finally have a home and it's brilliant! \ud83c\udf71\ud83d\ude4c", "link": "https://www.amazon.com/dp/B00T2O2O9G?tag=ilikeitib-20", "asin": "B00T2O2O9G", "rating": "4.5 stars", "rank": "#1 in Kitchen Organizers", "desc": "Camping setups taking longer than the hike itself? \ud83d\ude05 This instant pop-up tent sets up in 60 seconds. Waterproof, durable, and suddenly you're ready for any adventure! \u26fa"}, {"niche": "Home Organization", "title": "Canned goods have never looked so good! No more digging in the back. Rotation made easy! \ud83e\udd6b\ud83d\udc96", "link": "https://www.amazon.com/dp/B07YVPFJ7S?tag=ilikeitib-20", "asin": "B07YVPFJ7S", "rating": "4.6 stars", "rank": "#1 in Can Dispensers", "desc": "Where do guests put their cards at the reception? \ud83d\ude05 This elegant wedding card box keeps everything secure and looks beautiful on your guest book table. The detail that ties the whole room together! \ud83d\udc92"}, {"niche": "Home Organization", "title": "No tools needed but so sturdy! My shower has never been more organized. Love this hack! \ud83d\udec1\u2728", "link": "https://www.amazon.com/dp/B01MR2RWMG?tag=ilikeitib-20", "asin": "B01MR2RWMG", "rating": "4.4 stars", "rank": "#2 in Shower Caddies", "desc": "Renting glassware for your wedding costs a fortune? \ud83d\ude44 These disposable party cups look just like glass but won't break the budget. Elegant and practical - your wallet will thank you! \ud83e\udd42"}, {"niche": "Home Organization", "title": "These containers make my kitchen look like a magazine! Every time I open the pantry I smile. Worth every penny! \ud83c\udf6a\ud83d\udc95", "link": "https://www.amazon.com/dp/B00T2O1V0U?tag=ilikeitib-20", "asin": "B00T2O1V0U", "rating": "4.7 stars", "rank": "#1 in Food Storage", "desc": "Want to ask your bridesmaids but keep it memorable? \ud83d\udc57 This bridesmaid proposal gift box is the sweetest way to pop the question. Champagne, robes, and all the feels!"}, {"niche": "Travel & Outdoors", "title": "This Carry-On Backpack is the Travel Upgrade You Need \u2708\ufe0f\ud83d\udcab", "link": "https://www.amazon.com/dp/B0BSHXFLX7?tag=ilikeitib-20", "asin": "B0BSHXFLX7", "rating": 4.6, "rank": "#1 in Travel Backpacks", "desc": "Journals with paper that bleeds through your pen? \ud83d\ude05 This premium dotted notebook has paper quality that serious journalers swear by. Bullet journal dreams = finally achievable! \ud83d\udcd3"}, {"niche": "Travel & Outdoors", "title": "This Backpack is a Game Changer for Digital Nomads! \ud83d\udcbb\u2708\ufe0f", "link": "https://www.amazon.com/dp/B0BSHXFLX8?tag=ilikeitib-20", "asin": "B0BSHXFLX8", "rating": 4.5, "rank": "#3 in Travel Backpacks", "desc": "Pens that skip, blob, or just frustrate you? \ud83d\ude44 These Japanese gel pens write so smoothly you'll want to write everything down. Journaling game changed! \u270d\ufe0f"}, {"niche": "Travel & Outdoors", "title": "This Camping Tent Sets Up in 60 Seconds! \u26fa\u2728", "link": "https://www.amazon.com/dp/B08RYX1ZL7?tag=ilikeitib-20", "asin": "B08RYX1ZL7", "rating": 4.7, "rank": "#1 in Instant Tents", "desc": "Dog-earing pages and losing your spot? \ud83d\ude05 These gold book darts mark pages elegantly without damaging your books. For book lovers who take their reading seriously! \ud83d\udcda"}, {"niche": "Books & Stationery", "title": "The Journal That Changed My Planning Game! \ud83d\udcd3\u2728", "link": "https://www.amazon.com/dp/B0BSHXFLY3?tag=ilikeitib-20", "asin": "B0BSHXFLY3", "rating": 4.7, "rank": "#1 in Hardcover Notebooks", "desc": "Forgetting about cans in the back of the pantry? \ud83d\ude44 This can rack dispenser gives you first-in-first-out rotation automatically. Less food waste, more organization! \ud83e\udd6b"}, {"niche": "Books & Stationery", "title": "The Japanese Pens That Make Everything Look Aesthetic \u270d\ufe0f\ud83d\udda4", "link": "https://www.amazon.com/dp/B0CC8BSVNN?tag=ilikeitib-20", "asin": "B0CC8BSVNN", "rating": 4.6, "rank": "#1 in Gel Pens", "desc": "Shower caddies that fall down within a week? \ud83d\ude05 This adhesive shower caddy requires no drilling but holds strong. Chrome finish that looks expensive without the hassle! \ud83d\udec1"}, {"niche": "Books & Stationery", "title": "The Book Accessory That Book Lovers Need! \ud83d\udcda\ud83d\udcab", "link": "https://www.amazon.com/dp/B0BSHXFLY5?tag=ilikeitib-20", "asin": "B0BSHXFLY5", "rating": 4.6, "rank": "#2 in Bookmarks", "desc": "Pantry looking disorganized despite your best efforts? \ud83d\ude44 These airtight POP containers keep everything fresh and looking uniform. The kitchen upgrade you've been needing! \ud83e\udd61"}];
 function toggleDarkMode() {
 document.documentElement.classList.toggle('dark');
 localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
 }
-
 if (localStorage.getItem('darkMode') === 'true') document.documentElement.classList.add('dark');
-
 function searchProducts() {
 const query = document.getElementById('search').value.toLowerCase();
 const cards = document.querySelectorAll('#products > div');
@@ -616,7 +544,6 @@ if (text.includes(query)) visible++;
 document.getElementById('no-results').style.display = visible === 0 ? '' : 'none';
 document.getElementById('count').textContent = visible + ' products';
 }
-
 function filterCategory(slug) {
 const cards = document.querySelectorAll('#products > div');
 let visible = 0;
@@ -630,13 +557,12 @@ document.getElementById('no-results').style.display = visible === 0 ? '' : 'none
 document.getElementById('count').textContent = visible + ' products';
 window.scrollTo({top: 400, behavior: 'smooth'});
 }
-
 function openModal(i) {
 const p = products[i];
 document.getElementById('modal-content').innerHTML = `
 <div class="relative">
 <button onclick="closeModal()" class="absolute top-4 right-4 text-2xl z-10">&times;</button>
-<img src="${p.image}" class="w-full h-64 object-cover">
+<img src="images/product-${i+1}.jpg" class="w-full h-64 object-cover">
 <div class="p-6">
 <div class="flex items-center gap-2 mb-2">
 <span class="bg-rose-100 text-rose-600 px-2 py-1 rounded text-xs">${p.niche}</span>
@@ -647,20 +573,17 @@ document.getElementById('modal-content').innerHTML = `
 <a href="${p.link}" target="_blank" class="block w-full bg-rose-500 text-white text-center py-3 rounded-lg font-medium hover:bg-rose-600">Shop on Amazon →</a>
 </div></div>`;
 document.getElementById('modal').classList.remove('hidden');
-document.getElementById('modal').classList.add('flex');
+document.getElementById('modal').classListadd('flex');
 }
-
 function closeModal() {
 document.getElementById('modal').classList.add('hidden');
 document.getElementById('modal').classList.remove('flex');
 }
-
 function handleSubscribe(e) {
 e.preventDefault();
 document.getElementById('subscribe-msg').classList.remove('hidden');
 document.getElementById('email').value = '';
 }
-
 function saveToPinterest(title, link, image) {
 const url = `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(link)}&description=${encodeURIComponent(title)}&media=${encodeURIComponent(image)}`;
 window.open(url, '_blank');
