@@ -3,14 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olivia's Honest Favorites | ILikeItIBuyIt - Best Product Recommendations</title>
-<meta name="description" content="Discover Olivia's favorite products! Honest reviews on home organization, kitchen, beauty, tech and more.">
-<meta name="keywords" content="Olivia favorites, product recommendations, Amazon finds, home organization, kitchen gadgets, beauty products">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://ilikeitibuyit.thebestfinds.workers.dev">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Olivia's Honest Favorites | ILikeItIBuyIt">
-<meta property="og:description" content="Honest product recommendations from Olivia.">
+<title>Olivia's Honest Favorites | ILikeItIBuyIt</title>
+<meta name="description" content="Discover Olivia's favorite products! Honest reviews on home, kitchen, beauty, tech and more.">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {darkMode: 'class', theme: {extend: {colors: {rose: {500: '#f43f5e', 600: '#e11d48'}, stone: {50: '#fafaf9', 100: '#f5f5f4', 700: '#44403c', 800: '#292524', 900: '#1c1917'}}}
@@ -521,7 +515,6 @@ localStorage.setItem('theme', 'light');
 }
 }
 
-// Load saved theme
 (function() {
 var saved = localStorage.getItem('theme');
 if (saved === 'dark') {
@@ -552,13 +545,17 @@ function openModal(i) {
 var p = products[i];
 var prime = p.is_prime ? '<span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">Prime</span>' : '';
 var link = p.link || '#';
+var pinUrl = 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(link) + '&description=' + encodeURIComponent(p.title) + '&media=' + encodeURIComponent(window.location.origin + '/images/product-' + (i+1) + '.jpg');
 document.getElementById('modal-content').innerHTML = 
 '<img src="images/product-' + (i+1) + '.jpg" class="w-full h-52 object-cover" alt="' + p.title + '">' +
 '<div class="p-5">' +
 '<div class="flex gap-2 mb-3"><span class="bg-rose-100 dark:bg-stone-700 text-rose-600 px-3 py-1 rounded-full text-xs font-bold">' + p.category + '</span><span class="bg-yellow-100 px-3 py-1 rounded-full text-xs font-bold">⭐ ' + p.rating + '</span>' + prime + '</div>' +
 '<h3 class="font-bold text-xl dark:text-white mb-3">' + p.title + '</h3>' +
 '<p class="text-stone-600 dark:text-stone-300 mb-4">' + p.title + ' - Shop on Amazon for the best price!</p>' +
-'<a href="' + link + '" target="_blank" class="block w-full bg-rose-500 text-white text-center py-4 rounded-xl font-bold hover:bg-rose-600">Shop on Amazon 🛒</a>' +
+'<div class="flex gap-2">' +
+'<a href="' + link + '" target="_blank" class="flex-1 block bg-rose-500 text-white text-center py-3 rounded-xl font-bold hover:bg-rose-600">Shop on Amazon 🛒</a>' +
+'<a href="' + pinUrl + '" target="_blank" class="px-4 bg-red-600 text-white rounded-xl font-bold hover:bg-red-700" title="Save to Pinterest">📌</a>' +
+'</div>' +
 '<button onclick="closeModal()" class="mt-3 w-full py-3 text-stone-500 dark:text-stone-400 font-medium">Close</button>' +
 '</div>';
 document.getElementById('modal').classList.remove('hidden');
