@@ -5,66 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olivia's Honest Favorites | ILikeItIBuyIt - Best Product Recommendations</title>
 <meta name="description" content="Discover Olivia's favorite products! Honest reviews on home organization, kitchen, beauty, tech, and more. Shop Amazon favorites curated with love.">
-<meta name="keywords" content="Olivia favorites, product recommendations, Amazon finds, home organization, kitchen gadgets, beauty products, tech accessories, shopping">
-<meta name="author" content="Olivia">
+<meta name="keywords" content="Olivia favorites, product recommendations, Amazon finds, home organization, kitchen gadgets, beauty products, shopping">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://ilikeitibuyit.thebestfinds.workers.dev">
-
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://ilikeitibuyit.thebestfinds.workers.dev">
 <meta property="og:title" content="Olivia's Honest Favorites | ILikeItIBuyIt">
-<meta property="og:description" content="Honest product recommendations from Olivia. Discover her favorite finds in home, kitchen, beauty, and more!">
-<meta property="og:image" content="https://ilikeitibuyit.thebestfinds.workers.dev/images/product-1.jpg">
-
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Olivia's Honest Favorites | ILikeItIBuyIt">
-<meta name="twitter:description" content="Discover Olivia's favorite products! Honest reviews on home organization, kitchen, beauty, tech and more.">
-<meta name="twitter:image" content="https://ilikeitibuyit.thebestfinds.workers.dev/images/product-1.jpg">
-
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "ILikeItIBuyIt",
-  "url": "https://ilikeitibuyit.thebestfinds.workers.dev",
-  "description": "Olivia's honest product recommendations and favorite finds.",
-  "author": {
-    "@type": "Person",
-    "name": "Olivia"
-  }
-}
-</script>
-
-
+<meta property="og:description" content="Honest product recommendations from Olivia.">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-// Initialize theme on page load
-(function() {
-    var saved = localStorage.getItem('theme');
-    if (saved === 'dark') {
-        document.documentElement.classList.add('dark');
-        var btn = document.getElementById('themeBtn');
-        if(btn) btn.innerHTML = '☀️';
-    } else if (saved === 'light') {
-        document.documentElement.classList.remove('dark');
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.documentElement.classList.add('dark');
-        var btn = document.getElementById('themeBtn');
-        if(btn) btn.innerHTML = '☀️';
-    }
-})();
-</<script>
-tailwind.config = {darkMode: 'class', theme: {extend: {colors: {rose: {500: '#f43f5e', 600: '#e11d48'}, stone: {50: '#fafaf9', 100: '#f5f5f4', 700: '#44403c', 800: '#292524', 900: '#1c1917'}}}}
+tailwind.config = {darkMode: 'class', theme: {extend: {colors: {rose: {500: '#f43f5e', 600: '#e11d48'}, stone: {50: '#fafaf9', 100: '#f5f5f4', 700: '#44403c', 800: '#292524', 900: '#1c1917'}}}
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 body { font-family: 'Inter', sans-serif; }
 h1,h2 { font-family: 'Playfair Display', serif; }
 </style>
-<link rel="preload" as="image" href="images/product-1.jpg">
+<script>
+(function() {
+var saved = localStorage.getItem('theme');
+if (saved === 'dark') {
+document.documentElement.classList.add('dark');
+var btn = document.getElementById('themeBtn');
+if(btn) btn.innerHTML = '☀️';
+}
+})();
+</script>
 </head>
 <body class="bg-rose-50 dark:bg-stone-900 transition-colors duration-300">
 <header class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-stone-800/95 backdrop-blur shadow-lg z-50 border-b border-rose-100 dark:border-stone-700">
@@ -72,7 +37,6 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 <div class="flex items-center justify-between">
 <h1 class="text-xl font-bold text-rose-600 dark:text-rose-400">ILikeItIBuyIt</h1>
 <div class="flex items-center gap-3">
-<input type="text" id="search" placeholder="Search products..." class="px-4 py-2 border-2 border-rose-200 dark:border-stone-600 dark:bg-stone-700 dark:text-white rounded-full text-sm w-48 focus:outline-none focus:border-rose-500" onkeyup="searchProducts()">
 <button onclick="toggleDarkMode()" id="themeBtn" class="p-2 rounded-full hover:bg-rose-100 dark:hover:bg-stone-700 text-xl">🌙</button>
 <a href="https://pin.it/3gbzUgr7g" target="_blank" class="text-2xl hover:scale-125 transition">📌</a>
 </div>
@@ -92,7 +56,7 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 <span id="count" class="text-sm font-medium text-stone-500 dark:text-stone-400">40 products</span>
 <button onclick="filterCat('all')" class="text-rose-500 font-medium hover:underline">Show All</button>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="products"><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(0)">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5" id="products"><a href="https://www.amazon.com/dp/B09J7PY1LG?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-1.jpg" alt="Apothecary Jars" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.8 ⭐</div>
@@ -100,10 +64,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Apothecary Jars</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Apothecary Jars - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(1)">
+</a><a href="https://www.amazon.com/dp/B08ZK5WDWN?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-2.jpg" alt="Pantry Storage" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -111,10 +75,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Pantry Storage</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Pantry Storage - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(2)">
+</a><a href="https://www.amazon.com/dp/B0DJ249FQG?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-3.jpg" alt="Water Jug Holder" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -122,10 +86,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Water Jug Holder</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Water Jug Holder - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="tech-smart-home" onclick="showModal(3)">
+</a><a href="https://www.amazon.com/dp/B089DR29T6?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-4.jpg" alt="Smart Plugs" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -133,10 +97,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Smart Plugs</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Smart Plugs - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="tech-smart-home" onclick="showModal(4)">
+</a><a href="https://www.amazon.com/dp/B091FXLMS8?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-5.jpg" alt="Kasa Plugs" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -144,10 +108,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Kasa Plugs</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Kasa Plugs - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="tech-smart-home" onclick="showModal(5)">
+</a><a href="https://www.amazon.com/dp/B091FXQQMQ?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-6.jpg" alt="Smart Plug Money" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -155,10 +119,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Smart Plug Money</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Smart Plug Money - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="health-fitness" onclick="showModal(6)">
+</a><a href="https://www.amazon.com/dp/B0CSH2KY3L?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-7.jpg" alt="Collapsible Bottle" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.3 ⭐</div>
@@ -166,10 +130,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Collapsible Bottle</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Collapsible Bottle - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="health-fitness" onclick="showModal(7)">
+</a><a href="https://www.amazon.com/dp/B0CBLY9Z12?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-8.jpg" alt="Insulated Bottle" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -177,10 +141,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Insulated Bottle</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Insulated Bottle - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="health-fitness" onclick="showModal(8)">
+</a><a href="https://www.amazon.com/dp/B0C58GZHRX?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-9.jpg" alt="Travel Bottle" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.3 ⭐</div>
@@ -188,10 +152,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Travel Bottle</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Travel Bottle - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="fashion" onclick="showModal(9)">
+</a><a href="https://www.amazon.com/dp/B0DRCBYTR3?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-10.jpg" alt="Stanley Cup Accessory" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -199,10 +163,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Stanley Cup Accessory</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Stanley Cup Accessory - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="fashion" onclick="showModal(10)">
+</a><a href="https://www.amazon.com/dp/B0DT182V7V?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-11.jpg" alt="Smart Plug Night Light" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.4 ⭐</div>
@@ -210,10 +174,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Smart Plug Night Light</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Smart Plug Night Light - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="kitchen" onclick="showModal(11)">
+</a><a href="https://www.amazon.com/dp/B09FXXDGRJ?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-12.jpg" alt="Spice Jars" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.8 ⭐</div>
@@ -221,10 +185,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Spice Jars</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Spice Jars - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="kitchen" onclick="showModal(12)">
+</a><a href="https://www.amazon.com/dp/B0DKFK9LTK?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-13.jpg" alt="Meal Prep Containers" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -232,10 +196,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Meal Prep Containers</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Meal Prep Containers - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="kitchen" onclick="showModal(13)">
+</a><a href="https://www.amazon.com/dp/B0B2LLV1FL?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-14.jpg" alt="Glass Jars" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -243,10 +207,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Glass Jars</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Glass Jars - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="pet-supplies" onclick="showModal(14)">
+</a><a href="https://www.amazon.com/dp/B0DBJCDR4W?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-15.jpg" alt="Dog Water Bottle" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.8 ⭐</div>
@@ -254,10 +218,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Dog Water Bottle</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Dog Water Bottle - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="pet-supplies" onclick="showModal(15)">
+</a><a href="https://www.amazon.com/dp/B0F5K61KY9?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-16.jpg" alt="Pet Feeder" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.2 ⭐</div>
@@ -265,10 +229,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Pet Feeder</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Pet Feeder - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="beauty" onclick="showModal(16)">
+</a><a href="https://www.amazon.com/dp/B0CBT1NMVL?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-17.jpg" alt="Face Cleanser" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -276,10 +240,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Face Cleanser</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Face Cleanser - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="beauty" onclick="showModal(17)">
+</a><a href="https://www.amazon.com/dp/B0FC6TF84H?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-18.jpg" alt="Vanity Mirror" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.4 ⭐</div>
@@ -287,10 +251,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Vanity Mirror</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Vanity Mirror - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="beauty" onclick="showModal(18)">
+</a><a href="https://www.amazon.com/dp/B0C6R7W1PC?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-19.jpg" alt="Silk Pillowcases" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -298,10 +262,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Silk Pillowcases</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Silk Pillowcases - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="office" onclick="showModal(19)">
+</a><a href="https://www.amazon.com/dp/B01IJNJAZ0?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-20.jpg" alt="Office Chair" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.4 ⭐</div>
@@ -309,10 +273,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Office Chair</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Office Chair - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="office" onclick="showModal(20)">
+</a><a href="https://www.amazon.com/dp/B07V1Z3N7P?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-21.jpg" alt="Desk Organizer" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -320,10 +284,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Desk Organizer</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Desk Organizer - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="office" onclick="showModal(21)">
+</a><a href="https://www.amazon.com/dp/B075JYG2TB?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-22.jpg" alt="Standing Desk" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -331,10 +295,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Standing Desk</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Standing Desk - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="garden" onclick="showModal(22)">
+</a><a href="https://www.amazon.com/dp/B0CRT3P2RX?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-23.jpg" alt="Solar Lights" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.4 ⭐</div>
@@ -342,10 +306,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Solar Lights</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Solar Lights - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="garden" onclick="showModal(23)">
+</a><a href="https://www.amazon.com/dp/B0FTZWS873?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-24.jpg" alt="Garden Hose" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.4 ⭐</div>
@@ -353,10 +317,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Garden Hose</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Garden Hose - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="garden" onclick="showModal(24)">
+</a><a href="https://www.amazon.com/dp/B085Y1J85P?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-25.jpg" alt="String Lights" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.3 ⭐</div>
@@ -364,10 +328,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">String Lights</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop String Lights - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="baby-kids" onclick="showModal(25)">
+</a><a href="https://www.amazon.com/dp/B0BRFG1B8M?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-26.jpg" alt="Diaper Backpack" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -375,10 +339,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Diaper Backpack</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Diaper Backpack - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="baby-kids" onclick="showModal(26)">
+</a><a href="https://www.amazon.com/dp/B0CZKXHNK1?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-27.jpg" alt="Kids Tablet" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">3.9 ⭐</div>
@@ -386,10 +350,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Kids Tablet</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Kids Tablet - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="baby-kids" onclick="showModal(27)">
+</a><a href="https://www.amazon.com/dp/B0D4VSZR3P?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-28.jpg" alt="Play Mat" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -397,10 +361,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Play Mat</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Play Mat - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(28)">
+</a><a href="https://www.amazon.com/dp/B0D5Y391WS?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-29.jpg" alt="Drawer Organizers" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -408,10 +372,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Drawer Organizers</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Drawer Organizers - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(29)">
+</a><a href="https://www.amazon.com/dp/B0BR7MSWN2?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-30.jpg" alt="Closet Bins" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -419,10 +383,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Closet Bins</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Closet Bins - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(30)">
+</a><a href="https://www.amazon.com/dp/B0FQ4PH3GG?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-31.jpg" alt="Tupperware Lid Organizer" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -430,10 +394,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Tupperware Lid Organizer</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Tupperware Lid Organizer - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(31)">
+</a><a href="https://www.amazon.com/dp/B0BCFDX3JB?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-32.jpg" alt="Can Dispenser" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -441,10 +405,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Can Dispenser</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Can Dispenser - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(32)">
+</a><a href="https://www.amazon.com/dp/B00PC3JYQQ?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-33.jpg" alt="Shower Caddy" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.5 ⭐</div>
@@ -452,10 +416,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Shower Caddy</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Shower Caddy - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="home-organization" onclick="showModal(33)">
+</a><a href="https://www.amazon.com/dp/B08ZK5WDWN?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-34.jpg" alt="Food Containers" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -463,10 +427,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Food Containers</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Food Containers - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="travel" onclick="showModal(34)">
+</a><a href="https://www.amazon.com/dp/B09MQWWP87?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-35.jpg" alt="Carry-On Backpack" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -474,10 +438,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Carry-On Backpack</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Carry-On Backpack - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="travel" onclick="showModal(35)">
+</a><a href="https://www.amazon.com/dp/B09MQWWP87?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-36.jpg" alt="Digital Nomad Backpack" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.7 ⭐</div>
@@ -485,10 +449,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Digital Nomad Backpack</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Digital Nomad Backpack - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="travel" onclick="showModal(36)">
+</a><a href="https://www.amazon.com/dp/B0CR144NCS?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-37.jpg" alt="Camping Tent" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -496,10 +460,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Camping Tent</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Camping Tent - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="books-stationery" onclick="showModal(37)">
+</a><a href="https://www.amazon.com/dp/B0D5HFPCF1?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-38.jpg" alt="Journal" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.8 ⭐</div>
@@ -507,10 +471,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Journal</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Journal - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="books-stationery" onclick="showModal(38)">
+</a><a href="https://www.amazon.com/dp/B07S81PTLM?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-39.jpg" alt="Japanese Pens" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -518,10 +482,10 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Japanese Pens</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Japanese Pens - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div><div class="bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:scale-[1.02]" data-cat="books-stationery" onclick="showModal(39)">
+</a><a href="https://www.amazon.com/dp/B09Q5XBGCB?tag=ilikeitib-20" target="_blank" class="block bg-white dark:bg-stone-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
 <div class="relative h-40 overflow-hidden rounded-t-xl">
 <img src="images/product-40.jpg" alt="Book Accessory" class="w-full h-full object-cover" loading="lazy">
 <div class="absolute top-2 right-2 bg-white/90 dark:bg-stone-700 px-2 py-1 rounded-full text-xs font-bold">4.6 ⭐</div>
@@ -529,127 +493,46 @@ h1,h2 { font-family: 'Playfair Display', serif; }
 </div>
 <div class="p-3">
 <h3 class="font-bold text-sm dark:text-white line-clamp-2">Book Accessory</h3>
-<p class="text-xs text-stone-500 dark:text-stone-400 mt-1 line-clamp-2">Shop Book Accessory - Click for details!</p>
+<p class="text-xs text-stone-500 dark:text-stone-400 mt-1">Click to shop on Amazon</p>
 <div class="flex items-center gap-2 mt-2"><span class="bg-blue-100 text-blue-600 text-xs px-1.5 py-0.5 rounded">Prime</span></div>
 </div>
-</div></div>
-<div id="no-results" class="hidden text-center py-12 text-stone-500 dark:text-stone-400 text-lg">No products found 😔</div>
+</a></div>
 </div>
 </section>
-<section class="bg-white dark:bg-stone-800 py-12 px-4 shadow-lg">
+<section class="bg-white dark:bg-stone-800 py-12 px-4">
 <div class="max-w-md mx-auto text-center">
 <h3 class="text-2xl font-bold text-stone-800 dark:text-white">Get New Favorites Weekly! 📬</h3>
-<p class="text-stone-600 dark:text-stone-300 mt-2">Join to get notified about new products I discover.</p>
-<form onsubmit="handleSubscribe(event)" class="mt-5 flex gap-2 justify-center">
-<input type="email" id="email" placeholder="your@email.com" required class="px-4 py-2 border-2 border-rose-200 dark:border-stone-600 dark:bg-stone-700 dark:text-white rounded-lg text-sm w-56 focus:outline-none focus:border-rose-500">
-<button type="submit" class="px-6 py-2 bg-rose-500 text-white rounded-lg font-medium hover:bg-rose-600 hover:scale-105 transition">Subscribe</button>
-</form>
-<p id="subMsg" class="hidden mt-3 text-green-600 font-medium">✅ Thanks! You're on the list!</p>
-</div>
-</section>
-<section class="py-10 bg-rose-100 dark:bg-stone-800 px-4">
-<div class="max-w-md mx-auto text-center">
-<h3 class="font-bold text-xl text-stone-800 dark:text-white">Hey, I'm Olivia! 👋</h3>
-<p class="text-stone-600 dark:text-stone-300 mt-2">I share products I genuinely use and love.</p>
+<p class="text-stone-600 dark:text-stone-300 mt-2">Join to get notified about new products.</p>
 </div>
 </section>
 <footer class="bg-stone-900 text-stone-400 py-5 text-center text-sm">
-<p>© 2026 ILikeItIBuyIt | <a href="https://pin.it/3gbzUgr7g" target="_blank" class="text-rose-400 hover:underline">Pinterest</a> | #ad</p>
+<p>© 2026 ILikeItIBuyIt | <a href="https://pin.it/3gbzUgr7g" target="_blank" class="text-rose-400">Pinterest</a> | #ad</p>
 </footer>
-<div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4" onclick="closeModal()">
-<div class="bg-white dark:bg-stone-800 rounded-2xl max-w-md w-full max-h-[85vh] overflow-auto shadow-2xl" onclick="event.stopPropagation()">
-<div id="modalContent"></div>
-</div>
-</div>
 <script>
-var products = [{"title": "Apothecary Jars", "asin": "B09J7PY1LG", "category": "Home Organization", "image": "", "price": "", "original_price": 16.99, "is_prime": true, "rating": 4.8, "reviews": 1297, "link": "https://www.amazon.com/dp/B09J7PY1LG?tag=ilikeitib-20", "description": "Shop Apothecary Jars on Amazon."}, {"title": "Pantry Storage", "asin": "B08ZK5WDWN", "category": "Home Organization", "image": "", "price": "", "original_price": 36.99, "is_prime": true, "rating": 4.7, "reviews": 26833, "link": "https://www.amazon.com/dp/B08ZK5WDWN?tag=ilikeitib-20", "description": "Shop Pantry Storage on Amazon."}, {"title": "Water Jug Holder", "asin": "B0DJ249FQG", "category": "Home Organization", "image": "", "price": "", "original_price": 45.99, "is_prime": false, "rating": 4.5, "reviews": 229, "link": "https://www.amazon.com/dp/B0DJ249FQG?tag=ilikeitib-20", "description": "Shop Water Jug Holder on Amazon."}, {"title": "Smart Plugs", "asin": "B089DR29T6", "category": "Tech & Smart Home", "image": "", "price": "", "original_price": null, "is_prime": true, "rating": 4.7, "reviews": 571792, "link": "https://www.amazon.com/dp/B089DR29T6?tag=ilikeitib-20", "description": "Shop Smart Plugs on Amazon."}, {"title": "Kasa Plugs", "asin": "B091FXLMS8", "category": "Tech & Smart Home", "image": "", "price": "", "original_price": 29.99, "is_prime": true, "rating": 4.5, "reviews": 26841, "link": "https://www.amazon.com/dp/B091FXLMS8?tag=ilikeitib-20", "description": "Shop Kasa Plugs on Amazon."}, {"title": "Smart Plug Money", "asin": "B091FXQQMQ", "category": "Tech & Smart Home", "image": "", "price": "", "original_price": 16.99, "is_prime": true, "rating": 4.5, "reviews": 17955, "link": "https://www.amazon.com/dp/B091FXQQMQ?tag=ilikeitib-20", "description": "Shop Smart Plug Money on Amazon."}, {"title": "Collapsible Bottle", "asin": "B0CSH2KY3L", "category": "Health & Fitness", "image": "", "price": "", "original_price": 18, "is_prime": true, "rating": 4.3, "reviews": 2657, "link": "https://www.amazon.com/dp/B0CSH2KY3L?tag=ilikeitib-20", "description": "Shop Collapsible Bottle on Amazon."}, {"title": "Insulated Bottle", "asin": "B0CBLY9Z12", "category": "Health & Fitness", "image": "", "price": "", "original_price": 25.99, "is_prime": true, "rating": 4.7, "reviews": 4793, "link": "https://www.amazon.com/dp/B0CBLY9Z12?tag=ilikeitib-20", "description": "Shop Insulated Bottle on Amazon."}, {"title": "Travel Bottle", "asin": "B0C58GZHRX", "category": "Health & Fitness", "image": "", "price": "", "original_price": 18.49, "is_prime": true, "rating": 4.3, "reviews": 1595, "link": "https://www.amazon.com/dp/B0C58GZHRX?tag=ilikeitib-20", "description": "Shop Travel Bottle on Amazon."}, {"title": "Stanley Cup Accessory", "asin": "B0DRCBYTR3", "category": "Fashion", "image": "", "price": "", "original_price": null, "is_prime": true, "rating": 4.7, "reviews": 1079, "link": "https://www.amazon.com/dp/B0DRCBYTR3?tag=ilikeitib-20", "description": "Shop Stanley Cup Accessory on Amazon."}, {"title": "Smart Plug Night Light", "asin": "B0DT182V7V", "category": "Fashion", "image": "", "price": "", "original_price": 31.99, "is_prime": true, "rating": 4.4, "reviews": 165, "link": "https://www.amazon.com/dp/B0DT182V7V?tag=ilikeitib-20", "description": "Shop Smart Plug Night Light on Amazon."}, {"title": "Spice Jars", "asin": "B09FXXDGRJ", "category": "Kitchen", "image": "", "price": "", "original_price": 33.99, "is_prime": true, "rating": 4.8, "reviews": 6859, "link": "https://www.amazon.com/dp/B09FXXDGRJ?tag=ilikeitib-20", "description": "Shop Spice Jars on Amazon."}, {"title": "Meal Prep Containers", "asin": "B0DKFK9LTK", "category": "Kitchen", "image": "", "price": "", "original_price": 39.99, "is_prime": true, "rating": 4.6, "reviews": 2211, "link": "https://www.amazon.com/dp/B0DKFK9LTK?tag=ilikeitib-20", "description": "Shop Meal Prep Containers on Amazon."}, {"title": "Glass Jars", "asin": "B0B2LLV1FL", "category": "Kitchen", "image": "", "price": "", "original_price": 35.99, "is_prime": true, "rating": 4.5, "reviews": 4594, "link": "https://www.amazon.com/dp/B0B2LLV1FL?tag=ilikeitib-20", "description": "Shop Glass Jars on Amazon."}, {"title": "Dog Water Bottle", "asin": "B0DBJCDR4W", "category": "Pet Supplies", "image": "", "price": "", "original_price": null, "is_prime": true, "rating": 4.8, "reviews": 261, "link": "https://www.amazon.com/dp/B0DBJCDR4W?tag=ilikeitib-20", "description": "Shop Dog Water Bottle on Amazon."}, {"title": "Pet Feeder", "asin": "B0F5K61KY9", "category": "Pet Supplies", "image": "", "price": "", "original_price": 9.99, "is_prime": true, "rating": 4.2, "reviews": 829, "link": "https://www.amazon.com/dp/B0F5K61KY9?tag=ilikeitib-20", "description": "Shop Pet Feeder on Amazon."}, {"title": "Face Cleanser", "asin": "B0CBT1NMVL", "category": "Beauty", "image": "", "price": "", "original_price": 28, "is_prime": true, "rating": 4.7, "reviews": 388, "link": "https://www.amazon.com/dp/B0CBT1NMVL?tag=ilikeitib-20", "description": "Shop Face Cleanser on Amazon."}, {"title": "Vanity Mirror", "asin": "B0FC6TF84H", "category": "Beauty", "image": "", "price": "", "original_price": 59.99, "is_prime": false, "rating": 4.4, "reviews": 183, "link": "https://www.amazon.com/dp/B0FC6TF84H?tag=ilikeitib-20", "description": "Shop Vanity Mirror on Amazon."}, {"title": "Silk Pillowcases", "asin": "B0C6R7W1PC", "category": "Beauty", "image": "", "price": "", "original_price": null, "is_prime": true, "rating": 4.5, "reviews": 18143, "link": "https://www.amazon.com/dp/B0C6R7W1PC?tag=ilikeitib-20", "description": "Shop Silk Pillowcases on Amazon."}, {"title": "Office Chair", "asin": "B01IJNJAZ0", "category": "Office", "image": "", "price": "", "original_price": 39.99, "is_prime": true, "rating": 4.4, "reviews": 37054, "link": "https://www.amazon.com/dp/B01IJNJAZ0?tag=ilikeitib-20", "description": "Shop Office Chair on Amazon."}, {"title": "Desk Organizer", "asin": "B07V1Z3N7P", "category": "Office", "image": "", "price": "", "original_price": 39.99, "is_prime": true, "rating": 4.7, "reviews": 4376, "link": "https://www.amazon.com/dp/B07V1Z3N7P?tag=ilikeitib-20", "description": "Shop Desk Organizer on Amazon."}, {"title": "Standing Desk", "asin": "B075JYG2TB", "category": "Office", "image": "", "price": "", "original_price": 149.99, "is_prime": false, "rating": 4.6, "reviews": 15333, "link": "https://www.amazon.com/dp/B075JYG2TB?tag=ilikeitib-20", "description": "Shop Standing Desk on Amazon."}, {"title": "Solar Lights", "asin": "B0CRT3P2RX", "category": "Garden", "image": "", "price": "", "original_price": 37.99, "is_prime": true, "rating": 4.4, "reviews": 7686, "link": "https://www.amazon.com/dp/B0CRT3P2RX?tag=ilikeitib-20", "description": "Shop Solar Lights on Amazon."}, {"title": "Garden Hose", "asin": "B0FTZWS873", "category": "Garden", "image": "", "price": "", "original_price": 59.99, "is_prime": false, "rating": 4.4, "reviews": 176, "link": "https://www.amazon.com/dp/B0FTZWS873?tag=ilikeitib-20", "description": "Shop Garden Hose on Amazon."}, {"title": "String Lights", "asin": "B085Y1J85P", "category": "Garden", "image": "", "price": "", "original_price": 13.99, "is_prime": true, "rating": 4.3, "reviews": 15007, "link": "https://www.amazon.com/dp/B085Y1J85P?tag=ilikeitib-20", "description": "Shop String Lights on Amazon."}, {"title": "Diaper Backpack", "asin": "B0BRFG1B8M", "category": "Baby & Kids", "image": "", "price": "", "original_price": null, "is_prime": false, "rating": 4.6, "reviews": 596, "link": "https://www.amazon.com/dp/B0BRFG1B8M?tag=ilikeitib-20", "description": "Shop Diaper Backpack on Amazon."}, {"title": "Kids Tablet", "asin": "B0CZKXHNK1", "category": "Baby & Kids", "image": "", "price": "", "original_price": null, "is_prime": false, "rating": 3.9, "reviews": 1344, "link": "https://www.amazon.com/dp/B0CZKXHNK1?tag=ilikeitib-20", "description": "Shop Kids Tablet on Amazon."}, {"title": "Play Mat", "asin": "B0D4VSZR3P", "category": "Baby & Kids", "image": "", "price": "", "original_price": 36.99, "is_prime": true, "rating": 4.6, "reviews": 632, "link": "https://www.amazon.com/dp/B0D4VSZR3P?tag=ilikeitib-20", "description": "Shop Play Mat on Amazon."}, {"title": "Drawer Organizers", "asin": "B0D5Y391WS", "category": "Home Organization", "image": "", "price": "", "original_price": 32.99, "is_prime": true, "rating": 4.6, "reviews": 1493, "link": "https://www.amazon.com/dp/B0D5Y391WS?tag=ilikeitib-20", "description": "Shop Drawer Organizers on Amazon."}, {"title": "Closet Bins", "asin": "B0BR7MSWN2", "category": "Home Organization", "image": "", "price": "", "original_price": 46.99, "is_prime": true, "rating": 4.6, "reviews": 1419, "link": "https://www.amazon.com/dp/B0BR7MSWN2?tag=ilikeitib-20", "description": "Shop Closet Bins on Amazon."}, {"title": "Tupperware Lid Organizer", "asin": "B0FQ4PH3GG", "category": "Home Organization", "image": "", "price": "", "original_price": 19.99, "is_prime": true, "rating": 4.5, "reviews": 863, "link": "https://www.amazon.com/dp/B0FQ4PH3GG?tag=ilikeitib-20", "description": "Shop Tupperware Lid Organizer on Amazon."}, {"title": "Can Dispenser", "asin": "B0BCFDX3JB", "category": "Home Organization", "image": "", "price": "", "original_price": null, "is_prime": true, "rating": 4.5, "reviews": 755, "link": "https://www.amazon.com/dp/B0BCFDX3JB?tag=ilikeitib-20", "description": "Shop Can Dispenser on Amazon."}, {"title": "Shower Caddy", "asin": "B00PC3JYQQ", "category": "Home Organization", "image": "", "price": "", "original_price": null, "is_prime": false, "rating": 4.5, "reviews": 11063, "link": "https://www.amazon.com/dp/B00PC3JYQQ?tag=ilikeitib-20", "description": "Shop Shower Caddy on Amazon."}, {"title": "Food Containers", "asin": "B08ZK5WDWN", "category": "Home Organization", "image": "", "price": "", "original_price": 36.99, "is_prime": true, "rating": 4.7, "reviews": 26833, "link": "https://www.amazon.com/dp/B08ZK5WDWN?tag=ilikeitib-20", "description": "Shop Food Containers on Amazon."}, {"title": "Carry-On Backpack", "asin": "B09MQWWP87", "category": "Travel", "image": "", "price": "", "original_price": 29.89, "is_prime": true, "rating": 4.7, "reviews": 24333, "link": "https://www.amazon.com/dp/B09MQWWP87?tag=ilikeitib-20", "description": "Shop Carry-On Backpack on Amazon."}, {"title": "Digital Nomad Backpack", "asin": "B09MQWWP87", "category": "Travel", "image": "", "price": "", "original_price": 29.89, "is_prime": true, "rating": 4.7, "reviews": 24333, "link": "https://www.amazon.com/dp/B09MQWWP87?tag=ilikeitib-20", "description": "Shop Digital Nomad Backpack on Amazon."}, {"title": "Camping Tent", "asin": "B0CR144NCS", "category": "Travel", "image": "", "price": "", "original_price": null, "is_prime": false, "rating": 4.6, "reviews": 936, "link": "https://www.amazon.com/dp/B0CR144NCS?tag=ilikeitib-20", "description": "Shop Camping Tent on Amazon."}, {"title": "Journal", "asin": "B0D5HFPCF1", "category": "Books & Stationery", "image": "", "price": "", "original_price": 7.99, "is_prime": true, "rating": 4.8, "reviews": 2576, "link": "https://www.amazon.com/dp/B0D5HFPCF1?tag=ilikeitib-20", "description": "Shop Journal on Amazon."}, {"title": "Japanese Pens", "asin": "B07S81PTLM", "category": "Books & Stationery", "image": "", "price": "", "original_price": 8.99, "is_prime": true, "rating": 4.6, "reviews": 5815, "link": "https://www.amazon.com/dp/B07S81PTLM?tag=ilikeitib-20", "description": "Shop Japanese Pens on Amazon."}, {"title": "Book Accessory", "asin": "B09Q5XBGCB", "category": "Books & Stationery", "image": "", "price": "", "original_price": null, "is_prime": true, "rating": 4.6, "reviews": 311, "link": "https://www.amazon.com/dp/B09Q5XBGCB?tag=ilikeitib-20", "description": "Shop Book Accessory on Amazon."}];
-
 function toggleDarkMode() {
-    var btn = document.getElementById('themeBtn');
-    var isDark = document.documentElement.classList.contains('dark');
-    if (isDark) {
-        document.documentElement.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-        btn.innerHTML = '🌙';
-    } else {
-        document.documentElement.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-        btn.innerHTML = '☀️';
-    }
-} else {
-html.classList.add('dark');
-localStorage.setItem('theme', 'dark');
-document.getElementById('themeBtn').textContent = '☀️';
-}
-}
-
-// Check saved theme on load
-(function() {
-var saved = localStorage.getItem('theme');
-if (saved === 'dark') {
-document.documentElement.classList.add('dark');
-document.getElementById('themeBtn').textContent = '☀️';
-} else if (saved === 'light') {
+var btn = document.getElementById('themeBtn');
+var isDark = document.documentElement.classList.contains('dark');
+if (isDark) {
 document.documentElement.classList.remove('dark');
-document.getElementById('themeBtn').textContent = '🌙';
-} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+localStorage.setItem('theme', 'light');
+btn.innerHTML = '🌙';
+} else {
 document.documentElement.classList.add('dark');
-document.getElementById('themeBtn').textContent = '☀️';
+localStorage.setItem('theme', 'dark');
+btn.innerHTML = '☀️';
 }
-})();
-
-function searchProducts() {
-var q = document.getElementById('search').value.toLowerCase();
-var cards = document.querySelectorAll('#products > div');
-var visible = 0;
-cards.forEach(function(c) {
-var txt = c.textContent.toLowerCase();
-c.style.display = txt.includes(q) ? '' : 'none';
-if (txt.includes(q)) visible++;
-});
-document.getElementById('no-results').style.display = visible ? 'none' : '';
-document.getElementById('count').textContent = visible + ' products';
 }
 
 function filterCat(slug) {
-var cards = document.querySelectorAll('#products > div');
+var cards = document.querySelectorAll('#products > a');
 var visible = 0;
 cards.forEach(function(c) {
 var cat = c.getAttribute('data-cat');
 c.style.display = (slug === 'all' || cat === slug || (cat && cat.includes(slug))) ? '' : 'none';
 if (slug === 'all' || cat === slug || (cat && cat.includes(slug))) visible++;
 });
-document.getElementById('no-results').style.display = visible ? 'none' : '';
 document.getElementById('count').textContent = visible + ' products';
-window.scrollTo({top: 350, behavior: 'smooth'});
-}
-
-function showModal(i) {
-var p = products[i];
-var prime = p.is_prime ? '<span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs font-medium">Prime</span>' : '';
-var desc = p.description || 'Shop this product on Amazon.';
-document.getElementById('modalContent').innerHTML = 
-'<img src="images/product-' + (i+1) + '.jpg" class="w-full h-52 object-cover rounded-t-2xl" alt="' + p.title + '">' +
-'<div class="p-5">' +
-'<div class="flex gap-2 mb-3"><span class="bg-rose-100 dark:bg-stone-700 text-rose-600 px-3 py-1 rounded-full text-xs font-bold">' + p.category + '</span><span class="bg-yellow-100 px-3 py-1 rounded-full text-xs font-bold">⭐ ' + p.rating + '</span>' + prime + '</div>' +
-'<h3 class="font-bold text-xl dark:text-white mb-3">' + p.title + '</h3>' +
-'<p class="text-stone-600 dark:text-stone-300 mb-4">' + desc + '</p>' +
-'<a href="' + p.link + '" target="_blank" class="block w-full bg-rose-500 text-white text-center py-4 rounded-xl font-bold hover:bg-rose-600 hover:scale-[1.02] transition">Shop on Amazon 🛒</a>' +
-'<button onclick="closeModal()" class="mt-3 w-full py-3 text-stone-500 dark:text-stone-400 font-medium">Close</button>' +
-'</div>';
-document.getElementById('modal').classList.remove('hidden');
-document.getElementById('modal').classList.add('flex');
-}
-
-function closeModal() {
-document.getElementById('modal').classList.add('hidden');
-document.getElementById('modal').classList.remove('flex');
-}
-
-function handleSubscribe(e) {
-e.preventDefault();
-document.getElementById('subMsg').classList.remove('hidden');
-document.getElementById('email').value = '';
+window.scrollTo({top: 300, behavior: 'smooth'});
 }
 </script>
 </body>
